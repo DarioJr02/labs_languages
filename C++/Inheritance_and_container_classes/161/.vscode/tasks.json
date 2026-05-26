@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build", // ¡IMPORTANTE!: Este nombre ("build") debe coincidir con "preLaunchTask" en launch.json
+            "type": "shell",  // Indica que vamos a ejecutar un comando de shell
+            "command": "make",// ¡El comando que ejecuta tu Makefile!
+            "group": {
+                "kind": "build",
+                "isDefault": true // Hace que esta sea la tarea de construcción por defecto
+            },
+            "problemMatcher": [
+                "$gcc" // Para que VS Code detecte errores y advertencias de g++
+            ],
+            "detail": "Runs make to compile the project" // Una descripción opcional
+        }
+    ]
+}

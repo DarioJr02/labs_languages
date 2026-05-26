@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make", // Ejecuta tu Makefile
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc" // Para capturar errores y advertencias del compilador GCC
+            ],
+            "detail": "Compila el programa usando el Makefile"
+        }
+    ]
+}
