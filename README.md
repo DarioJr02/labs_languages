@@ -1,5 +1,5 @@
 #README
 
-This repository is solely intended to track my personal learning progress in C++.
+This repository's goal is to track my C++ learning.
 
 
