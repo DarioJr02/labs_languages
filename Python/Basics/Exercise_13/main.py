@@ -4,6 +4,7 @@ from class_cpu_sub_snapdragon import Snapdragon
 
 # Python Standard Library.
 from random import randint
+
 from random import choice
 
 cpu = Snapdragon(2017, "Qualcomm", 865, 4, 5000)

@@ -1,6 +1,4 @@
-"""
-Class_1.
-"""
+"""Class_CPU."""
 
 
 class CPU:
