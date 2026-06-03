@@ -11,7 +11,7 @@ class CPU:
         self._brand_name = brand_name
         self._model = model
         self._cores = cores
-        self._threads = (self._cores * 2)
+        self._threads = self._cores * 2
 
     """
     Getters
@@ -63,7 +63,7 @@ class CPU:
         """set cores"""
 
         self._cores = update_cores
-        self._threads = (update_cores * 2)
+        self._threads = update_cores * 2
 
     @year.setter
     def year(self, update_year):
@@ -82,24 +82,43 @@ class Snapdragon(CPU):
         """Init method from Snapdragon(CPU)"""
 
         super().__init__(year, brand_name, model, cores, threads)
-        self._battery = {'Mah': 3000}
-        self._internal_space = {'SSD': 512}
+        self._battery = {"Mah": 3000}
+        self._storage = {"SSD": 512}
 
     @property
     def battery(self):
         """Get battery size."""
         return self._battery
 
+    @property
+    def storage(self):
+        """Get internal space"""
+        return self._storage.get("SSD")
+
+    @property
+    def storage_type(self):
+        """Get storage type"""
+        return list(self._storage.keys())
+
     @battery.setter
     def battery(self, new_batery_size):
         """Set battery size."""
-        self._battery['Mah'] = new_batery_size
+        self._battery["Mah"] = new_batery_size
+
+    @storage.setter
+    def storage(self, new_storage_type):
+        """Set storage size."""
+        self._storage[new_storage_type[0]] = new_storage_type[1]
 
 
-cpu = Snapdragon(2017, 'Qualcomm', 865, 4, 5000)
+cpu = Snapdragon(2017, "Qualcomm", 865, 4, 5000)
 
 print(
-    f"My Specs are:\nCpu{cpu.brand_name}, Model: {cpu.model}",
-    f"\nCores: {cpu.cores}, Threads: {cpu.threads}, Year: {cpu.year}",
-    f"\nBattery: {cpu.battery['Mah']}"
+    f"My CPU Specs are:\nCpu:{cpu.brand_name}, Model:{cpu.model}",
+    f"\nCores:{cpu.cores}, Threads:{cpu.threads}, Year: {cpu.year}",
+    f"\nBattery:{cpu.battery['Mah']}, ST:{cpu.storage}GB",
+    f"\nStorage Type:{cpu.storage_type}",
 )
+
+cpu.storage = "HDD", 4000
+print(f"{cpu.storage}", f"{cpu.storage_type}")
