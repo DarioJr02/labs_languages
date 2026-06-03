@@ -1,6 +1,10 @@
-"""main.sh"""
+"""main.py"""
 
-from class_CPU_sub_Snapdragon import Snapdragon
+from class_cpu_sub_snapdragon import Snapdragon
+
+# Python Standard Library.
+from random import randint
+from random import choice
 
 cpu = Snapdragon(2017, "Qualcomm", 865, 4, 5000)
 
@@ -12,5 +16,16 @@ print(
 )
 
 cpu.storage = "HDD", 4000
-print(f"{cpu.storage}", f"{cpu.storage_type}")
+print(f"\n{cpu.storage}", f"{cpu.storage_type}")
 print(cpu.func_to_override())
+
+cpu.storage = "NVME", 2000
+
+print(f"\n{cpu.storage}", f"{cpu.storage_type}")
+print(cpu.func_to_override())
+
+# Python standard library => randint()
+print(randint(9, 15))
+
+l_users = ["Pedro", "Ismael", "Katherine", "Mike"]
+print(choice(l_users))

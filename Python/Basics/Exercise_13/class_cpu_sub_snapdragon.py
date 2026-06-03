@@ -1,6 +1,6 @@
 """This file is to test the Inheritance concept in python."""
 
-from class_CPU import CPU
+from class_cpu import CPU
 
 
 """Inheritance"""
@@ -9,12 +9,17 @@ from class_CPU import CPU
 class Snapdragon(CPU):
     """Basic inheritance and using super() method."""
 
-    def __init__(self, year, brand_name, model, cores, threads=0):
+    def __init__(
+        self, year, brand_name, model, cores, threads=0, battery=None, storage=None
+    ):
         """Init method from Snapdragon(CPU)"""
 
         super().__init__(year, brand_name, model, cores, threads)
-        self._battery = {"Mah": 3000}
-        self._storage = {"SSD": 512}
+        # self._battery = {"Mah": 3000}
+        # self._storage = {"SSD": 512}
+
+        self._battery = battery if battery is not None else {"Mah": 3000}
+        self._storage = storage if storage is not None else {"SSD": 512}
 
     @property
     def battery(self):
