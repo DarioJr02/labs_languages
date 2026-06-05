@@ -32,11 +32,29 @@ chapter_12 = path_3.read_text().rstrip().splitlines()
 for line in chapter_12:
     print(f"{line}")
 
-print(f"Lenght of chapter_12 in lines are: {len(chapter_12)}")
+print(
+    f"Lenght of chapter_12 in lines are: {len(chapter_12)}",
+    f", and its type is: {type(chapter_12)}",
+)
 
 # Modifying lines
 t_str = ""
 
+
 # for line in chapter_12:
 # t_str += f"\n| {line}"
 # print(t_str)
+
+print(f"\nReading chapter_12 slicing it: {chapter_12[-50:-12:2]}\n")
+
+
+# Replacing Text => .replace() method is case-sensitive.
+print(prev_chapter.replace("CPU", "PROCESSOR").replace("Property", "Propiedad"))
+
+# Temporarily splitlines.
+for line in prev_chapter.splitlines():
+    print(f"101 {line}")
+
+# Reversed text read
+for line in reversed(prev_chapter.splitlines()):
+    print(f"Reversed {line}")
