@@ -10,13 +10,6 @@ n_2 = None
 flag = True
 
 
-def check_input(n):
-    if int(n) and int(n) != 0:
-        return True
-    else:
-        return False
-
-
 def check_calc(n_1, n_2):
     try:
         result = int(n_1) / int(n_2)
