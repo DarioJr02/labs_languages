@@ -4,7 +4,7 @@
 
 # Global variables.
 
-love = "Amor"
+love = 'Amor'
 puts love
 
 puts `ls -l ~/Documents/`
@@ -21,7 +21,7 @@ class Human
     @weight = 70
 
     # Class variables init
-    @@id = @@id + 1
+    @@id += 1
   end
 
   def show_age
@@ -52,6 +52,6 @@ print(miguel.show_name)
 print(miguel.show_age)
 puts(Human.show_id)
 
-andrea = Human.new
+Human.new
 
 puts(Human.show_id)
