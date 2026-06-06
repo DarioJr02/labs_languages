@@ -29,5 +29,4 @@ else
 end
 
 # One line conditional with logic operators
-puts(b_2 || !b_2 || b_3) ? 'true' : 'false'
-
+puts(b_1 && !b_2 && b_3) ? 'true' : 'false'
