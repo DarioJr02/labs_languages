@@ -15,7 +15,7 @@ class Thing
   end
 
   # Overriding to_s method
-  def to_s
+  def inspect
     representation =
       "[Name: #{name} | Brand: #{brand}, | Year: #{year_made} | Model: #{model}]"
 
@@ -29,7 +29,7 @@ t1 = Thing.new('pixel', 'Google', 2022, 7)
 # p('Dario', 23, 300, (9 * 9).inspect)
 
 puts(t1.inspect)
-puts(t1.to_s)
+# puts(t1)
 
 puts(0o744) # Octal representation
 puts(t1.name.empty?)
