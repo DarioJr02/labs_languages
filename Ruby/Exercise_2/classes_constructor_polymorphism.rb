@@ -15,7 +15,7 @@ class Thing
   end
 
   # Overriding to_s method
-  def inspect
+  def to_s
     representation =
       "[Name: #{name} | Brand: #{brand}, | Year: #{year_made} | Model: #{model}]"
 
@@ -25,6 +25,7 @@ end
 
 # Using and overriding to_s
 t1 = Thing.new('pixel', 'Google', 2022, 7)
+t2 = Thing.new('Rog Phone', 'Asus', 2018, 2)
 # puts(t_1.to_s)
 # p('Dario', 23, 300, (9 * 9).inspect)
 
@@ -32,4 +33,11 @@ puts(t1.inspect)
 # puts(t1)
 
 puts(0o744) # Octal representation
+p(0o400)
+
 puts(t1.name.empty?)
+p(t1)
+p(t1.to_s)
+p(t2)
+p(t2.to_s)
+
