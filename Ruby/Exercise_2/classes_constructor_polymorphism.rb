@@ -29,3 +29,7 @@ t1 = Thing.new('pixel', 'Google', 2022, 7)
 # p('Dario', 23, 300, (9 * 9).inspect)
 
 puts(t1.inspect)
+puts(t1.to_s)
+
+puts(0o744) # Octal representation
+puts(t1.name.empty?)
