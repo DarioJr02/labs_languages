@@ -8,17 +8,24 @@ class Thing
   # Constructor definition
   def initialize(name, brand, year_made, model = nil)
     # Instance variables
-    @name = name
-    @brand = brand
+    @name = name.capitalize
+    @brand = brand.capitalize
     @year = year_made
-    @model = model
+    @model = model.to_s.capitalize
   end
 
   # Overriding to_s method
+  def to_s
+    representation =
+      "[Name: #{name} | Brand: #{brand}, | Year: #{year_made} | Model: #{model}]"
 
+    return representation
+  end
 end
 
 # Using and overriding to_s
-t_1 = Thing.new('Pixel', 'Google', 2022, 7)
+t1 = Thing.new('pixel', 'Google', 2022, 7)
 # puts(t_1.to_s)
 # p('Dario', 23, 300, (9 * 9).inspect)
+
+puts(t1.inspect)
