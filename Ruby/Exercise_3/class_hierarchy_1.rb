@@ -17,4 +17,11 @@ class CPU < Thing
 
     @description = description
   end
+
+  # Override to_s method
+  def to_s
+    msg = super.to_s + " | Description: #{description}"
+
+    return msg
+  end
 end
