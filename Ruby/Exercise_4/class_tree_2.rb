@@ -22,14 +22,14 @@ class Six < Five
   A = 99.to_f
 end
 
-ob = Five.new
-
 class Seven < Six
 end
 
-# Aquí como es que sólo ob_t puede acceder a la super class de ob? Es por su tipo? Por qué no se puede desde ob?
-ob_t = ob.class # => De qué tipo es ob_t? Cómo se puede comprobar el tipo de un objeto?
+ob = Five.new # => class Five instance
 
+ob_t = ob.class # => It's value is literally Five.
+puts(%(ob_t type is: #{ob_t.class}\n\n))
+puts(%(ob_t is a class?: #{ob_t.is_a?(Class)}\n\n))
 # puts(ob_t.superclass.superclass.superclass.superclass.superclass.superclass) # => Manual climb (NOT RECOMMENDED).
 
 begin
@@ -43,3 +43,14 @@ ob_s = Six.new
 
 puts("Constant inside class Six: #{Six::A}")
 puts("Constant inside class Seven due to sub-typed polymorphism: #{Seven::A}")
+
+ob_two = Two.new
+ob_two_lit_class = ob_two.class
+puts(%(ob_two_lit_class type is: #{ob_two_lit_class.class}\n\n))
+puts(%(ob_two_lit_class is a class?: #{ob_two_lit_class.is_a?(Class)}))
+
+begin
+  ob_two_lit_class = ob_two_lit_class.superclass
+  puts(ob_two_lit_class.inspect)
+end until ob_two_lit_class == nil
+puts(%(\n))
