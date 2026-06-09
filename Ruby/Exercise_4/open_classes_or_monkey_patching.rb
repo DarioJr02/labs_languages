@@ -31,3 +31,16 @@ puts(ob.x)
 puts(ob.x2)
 puts(ob.xy)
 puts(ob.xy2)
+puts("\n")
+
+# Adding a method to a defined Ruby class.
+
+class Array
+  def proto
+    return "Proto"
+  end
+end
+
+arr = [9.to_f, 10.22.to_i, 11.to_s]
+puts(arr)
+puts(arr.proto)
