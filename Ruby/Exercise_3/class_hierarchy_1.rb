@@ -20,7 +20,7 @@ class CPU < Thing
 
   # Override to_s method
   def to_s
-    msg = super.to_s + " | Description: #{description}"
+    msg = super + " | Description: #{description}"
 
     return msg
   end

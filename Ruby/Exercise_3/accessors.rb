@@ -19,7 +19,7 @@ class AnotherThing < CPU
 
   # Overriding to_s method
   def to_s
-    msg = super.to_s + "\nCountry: #{country} | Color: #{color}]"
+    msg = super + "\nCountry: #{country} | Color: #{color}]"
     return msg
   end
 end
