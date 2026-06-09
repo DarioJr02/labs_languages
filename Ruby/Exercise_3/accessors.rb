@@ -26,4 +26,4 @@ end
 
 a_thing = AnotherThing.new('Monitor', 'LG', 2020.to_s, '3D9D', 'High durability')
 
-puts(a_thing.to_s)
+puts(a_thing) # => a_thing class to_s by default?
