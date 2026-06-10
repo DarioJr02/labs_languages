@@ -38,3 +38,12 @@ puts(greet3.upcase)
 # 97 - 122 => Lowercase
 
 puts(greet3 << %(Last time.))
+# -----------------------------------------------------------------
+
+# Commas
+not_s = %(This ), %( is), 'not', 'a', %(string)
+puts(%(#{not_s}\n\nThe type of not_s is: ) << %(#{not_s.class}))
+
+not_s2 = 'i', 'like', 'pineapples', 'and', %(meat)
+puts(%(\n#{not_s2}))
+puts(%(The type of not_s2 is: ) << "#{not_s2.class}")
