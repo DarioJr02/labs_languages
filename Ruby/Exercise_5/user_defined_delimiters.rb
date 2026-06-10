@@ -45,5 +45,5 @@ puts(msg7.ljust(10, '0'))
 msg7_v2 = msg7.ljust(10, '0').to_f
 puts((msg7_v2 % 2).zero?)
 
-msg8 = '321'.rjust(5, '9')
-puts(msg8)
+msg8 = '50'.rjust(10, '1').to_f
+puts((msg8 % 4).zero?)
