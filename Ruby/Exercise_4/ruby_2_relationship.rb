@@ -10,13 +10,13 @@ end
 class Two < One
 end
 
-# Instance
+# ob_o and ob_t => class type object.
 ob_o = One.new.class
 ob_t = Two.new.class
 
 # Inheritance
-ob_o1 = One.new
 ob_t1 = Two.new
+ob_t2 = Two.new
 
 def climb(obj)
   begin
