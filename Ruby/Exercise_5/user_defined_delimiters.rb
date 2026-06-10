@@ -24,3 +24,26 @@ puts(msg5)
 msg6 = %Q*This is another double-quoted string: #{(y + 2.to_f) * (1.to_f * y)}*
 puts(msg6)
 # --------------------------------------------------------------------------------------------------
+
+# String Methods
+# To find a substring => .include?(str) -> true/false || .index(str) -> n where start the sequence.
+# To reverse a char sequence => string.reverse
+# To uppercase => upcase
+# To lowercase => downcase
+#
+puts(%(Next we'll see String methods in Ruby\n\n))
+puts(%(#{msg1.upcase}\n#{msg2.downcase}\n#{msg3.reverse}\n#{msg4.reverse}\n
+  #{msg5[3, 25]}\n#{msg6.include?('another')}\n\n))
+# ------------------------------------------------------------------------------
+
+# Padding Strings
+# .ljust() && r.just() => Those 2 methods recieve 2 arguments.
+# Seconde argument must be Integer or Float convertable.
+msg7 = '987'
+puts(msg7.ljust(10, '0'))
+
+msg7_v2 = msg7.ljust(10, '0').to_f
+puts((msg7_v2 % 2).zero?)
+
+msg8 = '321'.rjust(5, '9')
+puts(msg8)
