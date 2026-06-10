@@ -30,3 +30,11 @@ puts(greet2.downcase)
 
 greet3 = %(Hello ) + %(#{hostname.reverse}) + " 3th time."
 puts(greet3.upcase)
+
+# ----------------------------------------------------------------
+
+# FixNum integers range:
+# 65 - 90 => Uppercase
+# 97 - 122 => Lowercase
+
+puts(greet3 << %(Last time.))
