@@ -47,3 +47,11 @@ puts(%(#{not_s}\n\nThe type of not_s is: ) << %(#{not_s.class}))
 not_s2 = 'i', 'like', 'pineapples', 'and', %(meat)
 puts(%(\n#{not_s2}))
 puts(%(The type of not_s2 is: ) << "#{not_s2.class}")
+
+# Indexing into a string
+
+msg_to_index = %(Hello #{hostname}) << 'b'
+puts(msg_to_index[0, 4])
+puts(msg_to_index[2, 7])
+puts(msg_to_index[9, 2])
+puts(msg_to_index[-1].ord)
