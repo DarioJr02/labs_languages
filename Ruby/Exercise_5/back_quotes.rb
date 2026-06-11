@@ -69,4 +69,24 @@ puts msg_to_index[-3..]
 
 # String standard methods:
 msg = %(Good Morning!)
+print(%(#{msg.capitalize}\n))
+
+msg = msg.downcase
 print(%(#{msg}\n))
+
+msg = msg.reverse
+puts(msg)
+
+puts(msg[-13..].reverse)
+
+msg = msg.upcase
+puts(msg.reverse)
+
+msg = msg.reverse
+puts(msg)
+
+msg = msg.downcase.capitalize
+puts(msg)
+
+msg = msg[0..3].reverse.downcase.capitalize
+puts(msg)
