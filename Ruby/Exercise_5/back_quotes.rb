@@ -48,12 +48,25 @@ not_s2 = 'i', 'like', 'pineapples', 'and', %(meat)
 puts(%(\n#{not_s2}))
 puts(%(The type of not_s2 is: ) << "#{not_s2.class}")
 
-# Indexing into a string
+# Indexing into a String
 
-msg_to_index = %(Hello #{hostname}) << 'b'
+msg_to_index = %(Hello #{hostname}) << 'b' # => Commands adds a new line character.
 puts(msg_to_index[0, 4])
 puts(msg_to_index[2, 7])
 puts(msg_to_index[9, 2])
 puts(msg_to_index[-1].ord)
 puts(msg_to_index[-8, 7])
 puts(%(#{msg_to_index[3, 12].ord}))
+
+# Indexing into a String using two-dot range notation:
+
+puts(msg_to_index[1..4])
+puts(msg_to_index[3..8])
+puts(msg_to_index[2..7])
+
+# indexing with negative range.
+puts msg_to_index[-3..]
+
+# String standard methods:
+msg = %(Good Morning!)
+print(%(#{msg}\n))
