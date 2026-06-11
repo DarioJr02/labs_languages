@@ -26,6 +26,7 @@ def it_with_a_range(obj)
   puts("\n")
 end
 
+printf(%(Numerical, and character ranges:\n))
 it_with_a_range(n1)
 it_with_a_range(n2)
 it_with_a_range(n3)
@@ -39,3 +40,10 @@ it_with_a_range(n4_tdt)
 # Reversing ranges
 it_with_a_range(n5.reverse_each)
 it_with_a_range(n6.reverse_each)
+puts(%(\n))
+
+# Floating Ranges and reversing them.
+printf("Floating Strings:\n")
+sr1 = ("abc".."ada")
+it_with_a_range(sr1)
+it_with_a_range(sr1.reverse_each)
