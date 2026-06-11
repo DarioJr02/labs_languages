@@ -85,8 +85,20 @@ puts(msg.reverse)
 msg = msg.reverse
 puts(msg)
 
-msg = msg.downcase.capitalize
+msg.downcase
 puts(msg)
 
-msg = msg[0..3].reverse.downcase.capitalize
+msg[0..3].downcase
 puts(msg)
+
+msg = msg.capitalize.swapcase
+puts(msg)
+
+msg = msg.insert(5, 'moorning')
+puts(msg)
+
+msg_splitted = msg.split
+
+for word in msg_splitted do
+  puts(word)
+end
