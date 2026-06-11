@@ -44,6 +44,16 @@ puts(%(\n))
 
 # Floating Ranges and reversing them.
 printf("Floating Strings:\n")
-sr1 = ("abc".."ada")
+sr1 = ('abc'..'ada')
 it_with_a_range(sr1)
 it_with_a_range(sr1.reverse_each)
+
+# Iterating with format specifiers.
+def it_with_format_specifier(obj, f_specifier)
+  for i in obj do
+    printf("#{f_specifier} ", i)
+  end
+  puts("\n")
+end
+
+it_with_format_specifier(n1, '%0.3f')
