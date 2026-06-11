@@ -4,7 +4,7 @@
 # - chop => Removes the last character, no matter where it is.
 # - chomp => Removes the newline char if this exist, if not, anything will be removed.
 #
-# - Format Strings and matching specifiers.
+# - Format specifiers.
 
 # chop
 msg = %(Good afternoon.)
@@ -20,7 +20,7 @@ print(%(#{msg2}\n\n)) # => \n removed
 printf(%(Format Strings:\n))
 
 n = 10
-# Matching specifiers: 
+# Format specifiers:
 # %d - Decimal.
 # %f (6 float precision points by default and can be customized).
 # %x - Hexadecimal.
