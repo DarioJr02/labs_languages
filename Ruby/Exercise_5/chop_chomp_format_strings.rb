@@ -16,7 +16,7 @@ msg2 = %(It's a good day.\n)
 msg2 = msg2.chomp
 print(%(#{msg2}\n\n)) # => \n removed
 
-# Format Stings
+# Format Specifiers
 printf(%(Format Strings:\n))
 
 n = 10
@@ -28,5 +28,5 @@ n = 10
 # %s - String.
 # %p - Inspect object
 
-printf(%(d=%d, f=%f, f_pr=%0.8f, o=%o, x=%x\n), n, n + 2.53, (n + 5.921), (n * n).to_f, ((n * 25) + (n - 4)))
-printf(%(s=%s, p=%p\n), (n * 3.5), n.to_s)
+printf(%(d=%d, f=%f, f_pr=%0.8f, o=%o, x=%x\n), n, n + 2.53, n + 5.921, (n * n).to_f, (n * 25) + (n - 4))
+printf(%(s=%s, p=%p\n), n * 3.5, n.to_s)
