@@ -14,12 +14,11 @@ s_hedoc = <<~EODOC1
 EODOC1
 
 s_hedoc1 = <<~EDOC
-This is a snippet of a method.
-
-  obj.method(arg1, arg2) => String.
-  def method(arg1, arg2)
-  end
+    This is a snippet of a method.
+    obj.method(arg1, arg2) => String.
+    def method(arg1, arg2)
+    end
 EDOC
 
-printf(%(#{p_hedoc}\n))
-printf(%(#{s_hedoc}))
+puts p_hedoc
+puts s_hedoc1
