@@ -11,4 +11,14 @@ p(%W[This is a double-quoted array, to prove it: #{3**2}])
 # Symbols
 p(%s(red))
 
+# Commands 
 p(%(This is a command: #{%x`pwd`}))
+
+# RegExp
+r = "ruby"
+p(%(#{r =~ %r|^[a-z]*$|}))
+
+
+p("#{r.upcase =~ %r|^[A-Z]*$|}")
+r = ""
+p("#{r =~ %r|^[a-z]|}")
