@@ -38,7 +38,7 @@ puts(arr_h)
 
 # Checking array items class.
 def check_item_class(arr)
-  puts("The class type of the items in the next container are:\n\n")
+  puts("\nThe class type of the items in the next container are:\n")
 
   for item in arr do
     puts(item.class)
@@ -46,3 +46,9 @@ def check_item_class(arr)
 end
 
 check_item_class(arr_h)
+
+# Defining an array of filenames.
+arr_f = [`ls Ruby`]
+puts(%(The filename array length size is: #{arr_f.length}, and it's items are:))
+puts(arr_f)
+check_item_class(arr_f)
