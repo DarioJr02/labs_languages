@@ -52,3 +52,21 @@ arr_f = [`ls Ruby`]
 puts(%(The filename array length size is: #{arr_f.length}, and it's items are:))
 puts(arr_f)
 check_item_class(arr_f)
+
+# Creating a specific size array.
+
+# First argument takes the size, and the second the element.
+arr_sp = Array.new(4) # => (nil, nil, nil. nil)
+arr_sp2 = Array.new(4) # => Empty array.
+arr_sp3 = Array.new(4, 'Example')
+arr_sp4 = Array.new(4, [])
+arr_sp5 = Array.new(4, {})
+arr_sp6 = Array.new(3, 0.to_f)
+
+check_item_class(arr_sp)
+check_item_class(arr_sp2)
+check_item_class(arr_sp3)
+check_item_class(arr_sp4)
+check_item_class(arr_sp5)
+check_item_class(arr_sp6)
+
