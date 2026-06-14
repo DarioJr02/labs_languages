@@ -41,7 +41,7 @@ def check_item_class(arr)
   puts("\nThe class type of the items in the next container are:\n")
 
   for item in arr do
-    puts(item.class)
+    puts(%(Item: #{item} | Item Class: #{item.class}))
   end
 end
 
@@ -62,6 +62,8 @@ arr_sp3 = Array.new(4, 'Example')
 arr_sp4 = Array.new(4, [])
 arr_sp5 = Array.new(4, {})
 arr_sp6 = Array.new(3, 0.to_f)
+arr_sp7 = Array.new(4, (1..10))
+arr_sp8 = Array.new(2, 'a'.to_sym)
 
 check_item_class(arr_sp)
 check_item_class(arr_sp2)
@@ -69,4 +71,5 @@ check_item_class(arr_sp3)
 check_item_class(arr_sp4)
 check_item_class(arr_sp5)
 check_item_class(arr_sp6)
-
+check_item_class(arr_sp7)
+check_item_class(arr_sp8)
