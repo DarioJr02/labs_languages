@@ -43,6 +43,7 @@ def check_item_class(arr)
   for item in arr do
     puts(%(Item: #{item} | Item Class: #{item.class}))
   end
+  puts(%(Array Size: #{arr.length}))
 end
 
 check_item_class(arr_h)
@@ -62,7 +63,7 @@ arr_sp3 = Array.new(4, 'Example')
 arr_sp4 = Array.new(4, [])
 arr_sp5 = Array.new(4, {})
 arr_sp6 = Array.new(3, 0.to_f)
-arr_sp7 = Array.new(4, (1..10))
+arr_sp7 = Array.new(4, 1..10)
 arr_sp8 = Array.new(2, 'a'.to_sym)
 
 check_item_class(arr_sp)
@@ -73,3 +74,8 @@ check_item_class(arr_sp5)
 check_item_class(arr_sp6)
 check_item_class(arr_sp7)
 check_item_class(arr_sp8)
+
+# Multidimensional Arrays.
+
+arr_m = Array.new(2, Array.new(4, 'Hey'.to_sym))
+check_item_class(arr_m)
