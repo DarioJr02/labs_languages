@@ -23,17 +23,17 @@ arr_dq.length == arr_imp.length ? puts(true) : puts(false)
 
 # NilClass
 puts("#{arr_imp[5].nil?}") # => Returns true.
-puts("#{arr_imp[2].nil?}") 
+puts("#{arr_imp[2].nil?}")
 puts("#{arr_imp[5].class}") # => Returns NilClass
 puts("#{arr_imp[2].class}") # => Returns true.
 
 # Methods
 def to_ascii(character)
-  return character.ord
+  character.ord
 end
 
 # Heterogeneous Arrays.
-arr_h = [3, 3.93.to_f, 'third'.capitalize, 'fourth'.to_sym, %W['one', 'two', 'three'], to_ascii("h")]
+arr_h = [3, 3.93.to_f, 'third'.capitalize, 'fourth'.to_sym, %W['one', 'two', 'three'], to_ascii('h')]
 puts(arr_h)
 
 # Checking array items class.
@@ -79,3 +79,15 @@ check_item_class(arr_sp8)
 
 arr_m = Array.new(2, Array.new(4, 'Hey'.to_sym))
 check_item_class(arr_m)
+
+# Copying arrays
+arr_m2ref = arr_m # => This is NOT a copy.
+check_item_class(arr_m2ref)
+
+# Copying an Array.
+arr_m3 = arr_m.clone
+arr_m.clear
+# arr_m2ref.clear
+
+check_item_class(arr_m3)
+puts(%(arr_m length: #{arr_m.length} and arr_m2def length: #{arr_m2ref.length}))
