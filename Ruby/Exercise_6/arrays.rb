@@ -110,3 +110,10 @@ arr3 = %w['1', '2', '3']
 arr4 = [1, 2, 3]
 puts(%(Testing invalid comparison: #{arr1 <=> arr2}))
 puts(%(Previous result is because #{arr3[0].ord} ASCII representation is -gt #{arr4[1]}))
+
+# Blocks
+arr5 = [9, 3, 4, 5, 6]
+
+arr5.sort{ |a,b| a.to_s <=> b.to_s} # Schedule to refact
+
+# Modules preview
