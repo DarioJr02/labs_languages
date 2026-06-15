@@ -100,7 +100,7 @@ puts(%(arr_m length: #{arr_m.length} and arr_m2def length: #{arr_m2ref.length}))
 puts(%(\nArrays comparison using spaceship operator (<=>):\n))
 arr1 = [10, 5, 6]
 arr2 = [4, 5, 6, 9, 9, 9]
-puts arr1 <=> arr2
+puts((arr1 <=> arr2).zero?)
 
 # Comparing array length.
 puts(%(Comparing array length:\n#{arr1.length <=> arr2.length}))
@@ -131,4 +131,4 @@ end
 arr6 = MyArray.new(2, 1)
 arr7 = MyArray.new(3, 2)
 
-puts arr6 <=> arr7
+puts(%(Comparing MyArray length: #{arr6 <=> arr7}))
