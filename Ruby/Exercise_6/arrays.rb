@@ -81,7 +81,7 @@ arr_m = Array.new(2, Array.new(4, 'Hey'.to_sym))
 check_item_class(arr_m)
 
 # Copying arrays
-arr_m2ref = arr_m # => This is NOT a copy.
+arr_m2ref = arr_m.reverse! # => This is NOT a copy | .reverse => Returns a copy.
 check_item_class(arr_m2ref)
 
 # Copying an Array.
@@ -91,3 +91,13 @@ arr_m.clear
 
 check_item_class(arr_m3)
 puts(%(arr_m length: #{arr_m.length} and arr_m2def length: #{arr_m2ref.length}))
+
+# Array comparison
+# Results:
+# -1 lhs_op -l rhs_op == rhs_op -gt lhs_op
+# 0 -eq
+# 1 lhs_op -gt rhs_op 
+puts(%(\nArrays comparison using spaceship operator (<=>):\n))
+arr1 = [4, 5, 6]
+arr2 = [4, 5, 6, 9, 9, 9]
+puts arr1 <=> arr2
