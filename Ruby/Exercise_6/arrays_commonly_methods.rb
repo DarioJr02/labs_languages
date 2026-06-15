@@ -80,3 +80,10 @@ app(arr3, arr4)
 arr_to_clear = arr4.clone
 arr_to_clear.clear
 puts(arr_to_clear) # Empty Output
+
+# .compact => Returns array with nil items removed.
+arr_to_compact = [true, :ok, nil, 3, nil, Array.new(3, nil)] # => It ignores nested nil elements? => NO.
+print("#{arr_to_compact}\n")
+
+arr_to_compact2 = arr_to_compact.compact
+print(%((#{arr_to_compact2}\n)))
