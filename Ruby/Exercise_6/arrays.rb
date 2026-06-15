@@ -117,3 +117,18 @@ arr5 = [9, 3, 4, 5, 6]
 arr5.sort{ |a,b| a.to_s <=> b.to_s} # Schedule to refact
 
 # Modules preview
+
+# Testing modules and Array comparison operator (<=>).
+class MyArray < Array
+  include Comparable
+
+  def <=>(other)
+    return self.length <=> other.length
+  end
+end
+
+# Comparing both arrays length.
+arr6 = MyArray.new(2, 1)
+arr7 = MyArray.new(3, 2)
+
+puts arr6 <=> arr7
