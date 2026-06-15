@@ -33,6 +33,31 @@ def concatenate(arr1, arr2)
   puts("\n")
 end
 
+# - => Mainaints NOT commonly items of the first array respectly to the second.
+# Commonly values and duplicates will be deleted.
+def minus(arr1, arr2)
+  arr_minus = (arr1 - arr2)
+
+  puts("\nThe result of arr_minus is:\n")
+  for item in arr_minus
+    puts(item)
+  end
+end
+
+#  << Modifies first array by appending items from the second array.
+def app(arr1, arr2)
+  arr3 = (arr1 << arr2)
+  puts(%(The result of arr3 modified is:\n))
+
+  delimiter = ','
+
+  # REFACT THIS LOOP
+  for item in arr3
+    print(%(#{item}#{delimiter})) # How to chop the last comma?
+    end
+  puts("\n")
+end
+
 # & calls
 common_elements(arr1, arr2)
 common_elements(arr2, arr3)
@@ -41,3 +66,17 @@ common_elements(arr4, arr5)
 # + calls
 concatenate(arr1, arr2)
 concatenate(arr3, arr4)
+
+# - calls
+minus(arr1, arr2)
+minus(arr3, arr4)
+minus(arr4, arr5)
+
+# << calls
+app(arr1, arr2)
+app(arr3, arr4)
+
+# .clear => Modifies the array removing all elements.
+arr_to_clear = arr4.clone
+arr_to_clear.clear
+puts(arr_to_clear) # Empty Output
