@@ -98,6 +98,9 @@ puts(%(arr_m length: #{arr_m.length} and arr_m2def length: #{arr_m2ref.length}))
 # 0 -eq
 # 1 lhs_op -gt rhs_op 
 puts(%(\nArrays comparison using spaceship operator (<=>):\n))
-arr1 = [4, 5, 6]
+arr1 = [10, 5, 6]
 arr2 = [4, 5, 6, 9, 9, 9]
 puts arr1 <=> arr2
+
+# Comparing array length.
+puts(%(Comparing array length:\n#{arr1.length <=> arr2.length}))
