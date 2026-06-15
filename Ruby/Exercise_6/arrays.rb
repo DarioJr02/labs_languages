@@ -104,3 +104,9 @@ puts arr1 <=> arr2
 
 # Comparing array length.
 puts(%(Comparing array length:\n#{arr1.length <=> arr2.length}))
+
+# Invalid comparison?
+arr3 = %w['1', '2', '3']
+arr4 = [1, 2, 3]
+puts(%(Testing invalid comparison: #{arr1 <=> arr2}))
+puts(%(Previous result is because #{arr3[0].ord} ASCII representation is -gt #{arr4[1]}))
