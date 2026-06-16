@@ -65,11 +65,16 @@ puts("#{h3}\n")
 # .has_key?() => Use key?() instead has_key?()
 print(%(\n.h1 has P3?: #{h1.has_key?('P3')}\n)) # => returns a boolean.
 
-puts('It has it') if h1.key?('P3')
+puts('It has it.') if h1.key?('P3')
 
-# .has_value?()
+# .has_value?() => Use .value? insead
+puts('It has it.') if h1.value?('Mendoza')
 
 # .delete()
+h1.delete('P4')
+puts(h1.key?('P4') ? 'it as it.' : "It doesn't has.")
+puts(h1['P4'])
+
 # .keys
 # .values
 # .invert
