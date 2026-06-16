@@ -117,10 +117,18 @@ puts(arr2)
 
 # .flatten and .flatten! method calls() => Upacks nested sub-arrays, n level is opt as arg.
 puts("\n.flatten method:\n\n")
-arr_ascii_table = Array.new(2)
+arr_ascii_table = Array.new(1, 0.to_s)
 arr_ascii_table[0] = ('A'..'Z').to_a
 arr_ascii_table[1] = ('a'..'z').to_a
 print_array(arr_ascii_table)
 
 arr_ascii_table.flatten! # => .flatten! Modifies the original array, .flatten doesn't.
 print(arr_ascii_table)
+
+# .reverse method.
+puts("\n\n.reverse method:\n\n")
+print(arr1.reverse!)
+
+# .sort method.
+puts("\n\n.sort method:\n\n")
+print(arr2.sort!)
