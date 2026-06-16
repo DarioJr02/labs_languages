@@ -75,6 +75,11 @@ h1.delete('P4')
 puts(h1.key?('P4') ? 'it as it.' : "It doesn't has.")
 puts(h1['P4'])
 
-# .keys
-# .values
 # .invert
+puts("\n.invert mehtod:\n")
+puts("Before invert: #{h2}")
+puts("After invert: #{h2.invert}")
+
+# .keys
+puts("\nPrinting all keys of h3: #{}")
+# .values
