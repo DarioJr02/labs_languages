@@ -58,6 +58,12 @@ def app(arr1, arr2)
   puts("\n")
 end
 
+# .delete(object) => Modifies an array by deleting object that matches with the arg.
+# return -> nil if the arg doesn't match.
+def delete_arr(arr, item_to_del)
+  return arr.delete(item_to_del)
+end
+
 # & calls
 common_elements(arr1, arr2)
 common_elements(arr2, arr3)
@@ -86,4 +92,9 @@ arr_to_compact = [true, :ok, nil, 3, nil, Array.new(3, nil)] # => It ignores nes
 print("#{arr_to_compact}\n")
 
 arr_to_compact2 = arr_to_compact.compact
-print(%((#{arr_to_compact2}\n)))
+print(%((#{arr_to_compact2})\n))
+
+# delete() calls
+arr_to_del = arr4.clone
+delete_arr(arr_to_del, :blue) # => :blue object deleted.
+puts(arr_to_del)
