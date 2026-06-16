@@ -89,3 +89,22 @@ puts("Printing all keys of h4: #{h4.keys}")
 puts("\nPrinting all values of h2: #{h2.values}")
 puts("Printing all values of h3: #{h3.values}")
 puts("Printing all values of h4: #{h4.values}")
+
+# Array operations with Hashes
+
+h5 = { 'Brand:' => 'Pixel',
+       'Brand2:' => 'Samsung',
+       'Brand3:' => 'Xiaomi',
+       'Brand4:' => 'Asus' }
+
+h6 = { 1 => 'Ik', 'Brand4:' => 'Samsung' }
+
+puts(%(\nCommonly keys objects between h5 and h6: #{h5.keys & h6.keys}))
+puts(%(\nh5 and h6 values appended: #{h5.values + h6.values}))
+puts(%(\nh5 and h6 keys concatenated <<: #{h5.keys << h6.keys}))
+puts(%(\nh5 - h6 values (-): #{h5.values - h6.values}))
+puts("\nh5 <=> h6 keys:#{h5.keys <=> h6.keys}")
+
+# flatten
+h7 = (h5.values << h6.values)
+print("flatten h5 and h6 values#{h7}\n")
