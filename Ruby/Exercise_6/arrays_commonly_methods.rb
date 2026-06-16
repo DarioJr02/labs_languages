@@ -64,6 +64,11 @@ def delete_arr(arr, item_to_del)
   return arr.delete(item_to_del)
 end
 
+# .delete_at => Delete an item by index.
+def del_index(arr, index_to_del)
+  arr.delete_at(index_to_del)
+end
+
 # & calls
 common_elements(arr1, arr2)
 common_elements(arr2, arr3)
@@ -98,3 +103,7 @@ print(%((#{arr_to_compact2})\n))
 arr_to_del = arr4.clone
 delete_arr(arr_to_del, :blue) # => :blue object deleted.
 puts(arr_to_del)
+
+# delete_at() calls
+del_index(arr2, -1) # => 11 removed.
+puts(arr2)
