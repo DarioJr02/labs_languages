@@ -96,7 +96,7 @@ puts(%(arr_m length: #{arr_m.length} and arr_m2def length: #{arr_m2ref.length}))
 # Results:
 # -1 lhs_op -l rhs_op == rhs_op -gt lhs_op
 # 0 -eq
-# 1 lhs_op -gt rhs_op 
+# 1 lhs_op -gt rhs_op
 puts(%(\nArrays comparison using spaceship operator (<=>):\n))
 arr1 = [10, 5, 6]
 arr2 = [4, 5, 6, 9, 9, 9]
@@ -106,7 +106,7 @@ puts((arr1 <=> arr2).zero?)
 puts(%(Comparing array length:\n#{arr1.length <=> arr2.length}))
 
 # Invalid comparison?
-arr3 = %w['1', '2', '3']
+arr3 = ['1', '2', '3']
 arr4 = [1, 2, 3]
 puts(%(Testing invalid comparison: #{arr1 <=> arr2}))
 puts(%(Previous result is because #{arr3[0].ord} ASCII representation is -gt #{arr4[1]}))
