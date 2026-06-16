@@ -2,6 +2,8 @@
 
 # This file is to parctice Hashes in Ruby.
 
+# 1. Hashes:
+
 h1 = {}
 h1['P1'] = 'Pedro'
 h1['P2'] = 'Carlos'
@@ -21,9 +23,9 @@ h2.default = 'N\A User'
 
 p(h2['USER1'.downcase.capitalize])
 
-h3 = { 'City1' => 'Cundinamarca',
-       'City2' => 'Rotterdam',
-       'City3' => 'Paris',
+h3 = { 'City3' => 'Cundinamarca',
+       'City1' => 'Rotterdam',
+       'City2' => 'Paris',
        'City4' => 'Cali' }
 h3.default = 'N\A City'
 
@@ -48,3 +50,26 @@ print("#{h1}\n\n")
 print("#{h2}\n\n")
 print("#{h3}\n\n")
 print("#{h4}\n\n")
+
+# Sorting a Hash
+puts(%(\nSorting a Hash:\n))
+def sort_hash(a_hash)
+  return a_hash.sort{ |a, b| a.to_s <=> b.to_s } # Why this don't work?
+end
+
+sort_hash(h3)
+puts("#{h3}\n")
+
+# 2. Hash methods:
+
+# .has_key?() => Use key?() instead has_key?()
+print(%(\n.h1 has P3?: #{h1.has_key?('P3')}\n)) # => returns a boolean.
+
+puts('It has it') if h1.key?('P3')
+
+# .has_value?()
+
+# .delete()
+# .keys
+# .values
+# .invert
