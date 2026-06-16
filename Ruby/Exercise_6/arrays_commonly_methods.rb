@@ -69,6 +69,13 @@ def del_index(arr, index_to_del)
   arr.delete_at(index_to_del)
 end
 
+# .flatten and .flatten! method.
+def print_array(arr)
+  for i in arr do
+    print(i)
+  end
+end
+
 # & calls
 common_elements(arr1, arr2)
 common_elements(arr2, arr3)
@@ -107,3 +114,13 @@ puts(arr_to_del)
 # delete_at() calls
 del_index(arr2, -1) # => 11 removed.
 puts(arr2)
+
+# .flatten and .flatten! method calls() => Upacks nested sub-arrays, n level is opt as arg.
+puts("\n.flatten method:\n\n")
+arr_ascii_table = Array.new(2)
+arr_ascii_table[0] = ('A'..'Z').to_a
+arr_ascii_table[1] = ('a'..'z').to_a
+print_array(arr_ascii_table)
+
+arr_ascii_table.flatten! # => .flatten! Modifies the original array, .flatten doesn't.
+print(arr_ascii_table)
