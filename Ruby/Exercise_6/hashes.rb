@@ -81,8 +81,11 @@ puts("Before invert: #{h2}")
 puts("After invert: #{h2.invert}")
 
 # .keys
-puts("\nPrinting all keys of h2: #{h2.keys}")
-puts("\nPrinting all keys of h3: #{h3.keys}")
-puts("\nPrinting all keys of h4: #{h4.keys}")
+puts("Printing all keys of h2: #{h2.keys}")
+puts("Printing all keys of h3: #{h3.keys}")
+puts("Printing all keys of h4: #{h4.keys}")
 
 # .values
+puts("\nPrinting all values of h2: #{h2.values}")
+puts("Printing all values of h3: #{h3.values}")
+puts("Printing all values of h4: #{h4.values}")
