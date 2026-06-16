@@ -33,3 +33,6 @@ h4 = { 'ID' => id += 1,
 
 p(h4['ID'])
 p(h4['ID1'])
+
+# Accesing to a undefined key => return nil.
+p(h4['city1'])
