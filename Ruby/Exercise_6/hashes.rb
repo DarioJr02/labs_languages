@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'matrix'
+
 # This file is to parctice Hashes in Ruby.
 
 # 1. Hashes:
@@ -111,3 +113,14 @@ print("flatten h5 and h6 values#{h7}\n\n")
 
 # reverse
 print(((h5.keys + h6.keys) << (h3.keys + h5.keys)).reverse)
+
+# Matrix
+v1 = Vector[3, 4, 5]
+v2 = Vector[6, 7, 8]
+v3 = Vector[6, 7, 9]
+m1 = (v1 + v2)
+
+puts("\n\nMatrix m1: #{m1}\n\n")
+
+m2 = Matrix.columns([v1, v2, v3])
+puts("Matrix m2: #{m2}")
