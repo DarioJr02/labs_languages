@@ -51,3 +51,17 @@ str.each_char { |c| print("#{c.ord} ") }
 puts("\n")
 
 str.each_byte { |b| print("#{b} ") }
+puts("\n")
+
+# With literal values
+('a'..'z').to_a.each { |c| print("#{c} ") }
+puts("\n")
+
+('a'..'z').to_a.each_slice(3) { |c| print("#{c} ") }
+puts("\n")
+
+# do keyword can be omitted but not recommended.
+for c in ('a'..'f').to_a
+  print("#{c} ")
+end
+puts("\n")
