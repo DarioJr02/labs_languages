@@ -124,3 +124,16 @@ puts("\n\nMatrix m1: #{m1}\n\n")
 
 m2 = Matrix.columns([v1, v2, v3])
 puts("Matrix m2: #{m2}")
+
+m_rows = Matrix.rows([v2, v3, v1])
+puts("Matrix rows: #{m_rows}")
+
+# Sets
+s1 = Set.new([(10..17).to_a])
+s2 = Set.new([(17..28).to_a])
+puts("\ns1: #{s1}, it's type is: #{s1.class}")
+puts("s2: #{s2}, it's type is: #{s2.class}")
+
+# Merge Sets
+s3 = s1.merge(s2)
+puts("\nsResult of s1.merge(s2): #{s3} | it's type is: #{s3.class}")
