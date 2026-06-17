@@ -35,7 +35,7 @@ id = 0
 id += 1
 
 h4 = { 'ID' => id += 1,
-       'ID1' => id += 1 }
+       'ID1' => id + 1 }
 h4.default = 'N\A ID'
 
 p(h4['ID'])
@@ -54,7 +54,7 @@ print("#{h4}\n\n")
 # Sorting a Hash
 puts(%(\nSorting a Hash:\n))
 def sort_hash(a_hash)
-  return a_hash.sort{ |a, b| a.to_s <=> b.to_s } # Why this don't work?
+  a_hash.sort { |a, b| a.to_s <=> b.to_s } # Why this don't work?
 end
 
 sort_hash(h3)
@@ -107,4 +107,7 @@ puts("\nh5 <=> h6 keys:#{h5.keys <=> h6.keys}")
 
 # flatten
 h7 = (h5.values << h6.values)
-print("flatten h5 and h6 values#{h7}\n")
+print("flatten h5 and h6 values#{h7}\n\n")
+
+# reverse
+print(((h5.keys + h6.keys) << (h3.keys + h5.keys)).reverse)
