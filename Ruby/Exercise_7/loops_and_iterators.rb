@@ -107,3 +107,19 @@ puts("\n")
 # You can do the same with multidimensional Arrays.
 arr = (25..35).to_a
 arr.each { |i| print("#{i.upto(arr.last + 1) { |o| print("#{o} ") }} ") }
+
+# .downto
+
+puts("\n\n.downto() method:\n")
+
+# with int values.
+n2 = 9
+n2.downto(4 - 1) { |i| print("#{i} ") }
+
+puts("\n\n")
+
+# with chars
+c1 = 'z'
+c1.ord.downto('w'.ord) { |c| print("#{c.chr} ") } # => String to ASCII => ASCII to String.
+
+puts("\n\n")
