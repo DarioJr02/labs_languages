@@ -123,3 +123,7 @@ c1 = 'z'
 c1.ord.downto('w'.ord) { |c| print("#{c.chr} ") } # => String to ASCII => ASCII to String.
 
 puts("\n\n")
+
+# with arrays
+arr2 = Array.new(3, Array.new(3, 100))
+arr2.each { |x, y, z| print(" |x=#{x.downto(90).to_a} | y=#{y.downto(88).to_a} | z=#{z.downto(85).to_a}| ") }
