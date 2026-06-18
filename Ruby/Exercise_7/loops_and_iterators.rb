@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-# This file is to practice Loops and iterators.
+# This file is to practice Loops, iterators.
+# Blocks, blocks parameters.
+#
 
 require 'matrix'
 
@@ -65,3 +67,16 @@ for c in ('a'..'f').to_a
   print("#{c} ")
 end
 puts("\n")
+
+# Block and block parameters.
+v1 = Vector[(5..10).to_a]
+v2 = Vector[('f'..'k').to_a]
+v3 = Vector[(10..15).to_a]
+
+m1 = Matrix.rows([v1, v2, v3])
+puts("\n#{m1}\n\n")
+
+# Block with some block parameters.
+m1.each { |a, b, c| puts("#{a}:#{b}:#{c}") } # Aquí la salida se trunca por el tamaño de la matriz?
+
+m1.each do |a, b, c| puts("#{a}:#{b}:#{c}") end # Same result but before is recommended.
