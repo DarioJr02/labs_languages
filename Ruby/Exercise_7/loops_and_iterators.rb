@@ -126,4 +126,4 @@ puts("\n\n")
 
 # with arrays
 arr2 = Array.new(3, Array.new(3, 100))
-arr2.each { |x, y, z| print(" |x=#{x.downto(90).to_a} | y=#{y.downto(88).to_a} | z=#{z.downto(85).to_a}| ") }
+arr2.each { |x, y, z| print(" |x=#{x.downto(90).to_a}\n\n | y=#{y.downto(88).to_a}\n\n | z=#{z.downto(85).to_a}\n\n|") }
