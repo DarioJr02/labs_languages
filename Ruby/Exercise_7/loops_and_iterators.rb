@@ -79,4 +79,15 @@ puts("\n#{m1}\n\n")
 # Block with some block parameters.
 m1.each { |a, b, c| puts("#{a}:#{b}:#{c}") } # Aquí la salida se trunca por el tamaño de la matriz?
 
-m1.each do |a, b, c| puts("#{a}:#{b}:#{c}") end # Same result but before is recommended.
+m1.each do |a, b, c| puts("#{a}:#{b}:#{c}") end # Same result but before is recommended.Symbol
+
+# .upto and .downto methods
+puts("\n.upto and .downto methods:\n")
+
+n = 0
+n.upto(3**2) { |i| print("#{i} ") }
+
+puts("\n")
+
+c = 's'
+c.upto('z') { |i| print("#{i} ")}
