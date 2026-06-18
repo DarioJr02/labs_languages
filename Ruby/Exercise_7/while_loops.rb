@@ -19,6 +19,6 @@ while n < 13
   n = (n + 1)
   print("#{n} ")
 
-  n >= 13 ? puts("n >= 13") : puts("n <= 13")
+  n >= 13 ? puts('n >= 13') : puts('n <= 13')
 end
 puts("\n")
