@@ -84,10 +84,26 @@ m1.each do |a, b, c| puts("#{a}:#{b}:#{c}") end # Same result but before is reco
 # .upto and .downto methods
 puts("\n.upto and .downto methods:\n")
 
+# .upto(limit) with int values.
 n = 0
 n.upto(3**2) { |i| print("#{i} ") }
 
 puts("\n")
 
+# .upto(limit) with floats
+# f = 3.1
+# f.upto(4.5) { |i| print("#{i} ") }
+# .upto() are not defined to float values.
+# values between 3.1 to 4.5 are potentially infinite.
+
+# .upto(limit) with chars
 c = 's'
-c.upto('z') { |i| print("#{i} ")}
+c.upto('z') { |i| print("#{i} ") }
+
+puts("\n")
+
+# .upto() with array
+
+# You can do the same with multidimensional Arrays.
+arr = (25..35).to_a
+arr.each { |i| print("#{i.upto(arr.last + 1) { |o| print("#{o} ") }} ") }
