@@ -79,7 +79,7 @@ puts("\n#{m1}\n\n")
 # Block with some block parameters.
 m1.each { |a, b, c| puts("#{a}:#{b}:#{c}") } # Aquí la salida se trunca por el tamaño de la matriz?
 
-m1.each do |a, b, c| puts("#{a}:#{b}:#{c}") end # Same result but before is recommended.Symbol
+m1.each { |a, b, c| puts("#{a}:#{b}:#{c}") } # Same result but before is recommended.Symbol
 
 # .upto and .downto methods
 puts("\n.upto and .downto methods:\n")
@@ -126,4 +126,15 @@ puts("\n\n")
 
 # with arrays
 arr2 = Array.new(3, Array.new(3, 100))
-arr2.each { |x, y, z| print(" |x=#{x.downto(90).to_a}\n\n | y=#{y.downto(88).to_a}\n\n | z=#{z.downto(85).to_a}\n\n|") }
+arr2.each { |x, y, z| print(" |x=#{x.downto(90).to_a}\n\n | y=#{y.downto(88).to_a}\n\n | z=#{z.downto(85).to_a} |") }
+
+puts("\n\n")
+
+# .step() with int values.
+n2 = 3
+n2.step(13) { |i| print("#{i} ") }
+puts("\n")
+
+# .step() to poblate arrays.
+arr3 = []
+n2.step(15) { |c| arr3.push(c**2) }
