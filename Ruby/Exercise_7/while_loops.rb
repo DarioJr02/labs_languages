@@ -19,32 +19,26 @@ while n > 3
   print("n=#{n}")
 end
 
+n1 = 0
+
 # This loop will be executed correctly.
-while n < 7
-  puts("n < 13 ?: #{flag}")
-  n = (n + 1)
-  print("#{n} ")
-
-  n >= 7 ? puts('n >= 13') : puts('n <= 13')
-end
-
-n1 = 1
-
-while n1 < 5
+puts("\n1: while loop:")
+while n1 < 5 # => do is optional.
   n1 += 1
   # Does same result => n1 = (n + 1) || n1 = n + 1
   print("n1=#{n1}")
 end
 puts("\n")
 n1 = 0
-
-# Single line while loops => while modifier
 puts(n1)
 
+# Single line while loops => while modifier
+puts("\n2: Single line while loop:")
 n1 += 1 while n1 < 5
-print("\nn1=#{n1}\n\n")
+print("n1=#{n1}\n\n")
 
 # begin..end blocks.
+puts("\n3: begin..end block:")
 n1 = 0
 puts("n1=#{n1}\n\n")
 
@@ -56,11 +50,21 @@ end while n1 < 10
 puts("\nn1=#{n1}\n\n")
 
 # One line begin..end block loop
+puts("\n4: Single line begin..end block:")
 n1 = 0
 begin print("n1=#{n1} "); n1 += 1 end while n1 < 13
 puts("\nn1=#{n1}\n")
 
 begin print("n1=#{n1} "); n1 -= 1 end while n1 > 0
+puts("\nn1=#{n1}")
+
+# until loops.
+puts("\n5: until loops:")
+
+until n1 == (27 / 3) # => do is optional.
+  n1 += 1
+  print("n1=#{n1} ")
+end
 puts("\nn1=#{n1}")
 
 # Only the statement that directly precedes while is part of the logic loop.
