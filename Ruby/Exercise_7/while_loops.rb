@@ -33,6 +33,7 @@ n1 = 0
 puts(n1)
 
 # Single line while loops => while modifier
+# Only the statement that directly precedes while is part of the logic loop.
 puts("\n2: Single line while loop (-ONLY IF THE LOGIC BEFORE WHILE-):")
 n1 += 1 while n1 < 5
 print("n1=#{n1}\n\n")
@@ -76,13 +77,26 @@ puts("\nn1=#{n1}\n\n")
 until n1 == (200 - 200) do print("n1=#{n1}"); n1 -= 1 end
 puts("\nn1=#{n1}")
 
-# Only the statement that directly precedes while is part of the logic loop.
-n = 0
-n1 = 0
+# loop
+puts("\n7: loop:")
 
-# n1 += 1 while n1 < 5
+arr = (10..20).to_a
 
-# n += 1; n1 += 1 while n1 < 5
+i = 0
+loop do
+  print("#{arr[i]} ")
+  i += 1
 
-# We now check the value of each variable.
-# puts("n=#{n}, n1=#{n1}")
+  break if i == arr.length
+end
+puts("\n")
+
+c = 0
+arr2 = ((40 + 0)..(50 - 4)).to_a
+loop do
+  print("#{arr2[c]} ")
+  c += 1
+  break if c == arr2.length
+end
+
+puts("\n")
