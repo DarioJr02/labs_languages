@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'matrix'
+require 'matrix' # matrix => To use Matrix and Vectors
 
 # This file is to parctice Hashes in Ruby.
 
@@ -137,3 +137,8 @@ puts("s2: #{s2}, it's type is: #{s2.class}")
 # Merge Sets
 s3 = s1.merge(s2)
 puts("\nsResult of s1.merge(s2): #{s3} | it's type is: #{s3.class}")
+
+# Set vs Matrix
+
+s4 = Set.new([v1.to_set])
+puts("#{s4}, and it's type is: #{s4.class}")
