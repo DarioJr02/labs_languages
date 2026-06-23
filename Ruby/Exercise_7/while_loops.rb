@@ -90,13 +90,18 @@ loop do
   break if i == arr.length
 end
 puts("\n")
+i = 0 # => We decrement the iterator variable to use it again.
 
-c = 0
 arr2 = ((40 + 0)..(50 - 4)).to_a
 loop do
-  print("#{arr2[c]} ")
-  c += 1
-  break if c == arr2.length
-end
+  print("#{arr2[i]} ")
+  i += 1
 
+  break if i == arr2.length
+end
+i = 0
 puts("\n")
+
+# Single line loop
+puts("\nSingle line loop:")
+loop { print("#{arr2[i]} "); i += 1; break if i == arr2.length } # => Use .each method or slice it in multiple lines.
