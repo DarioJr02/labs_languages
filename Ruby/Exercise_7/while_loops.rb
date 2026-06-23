@@ -44,7 +44,7 @@ puts(n1)
 n1 += 1 while n1 < 5
 print("\nn1=#{n1}\n\n")
 
-# Another valid syntax.
+# begin..end blocks.
 n1 = 0
 puts("n1=#{n1}\n\n")
 
@@ -53,10 +53,15 @@ begin
   n1 += 1
 end while n1 < 10
 
-puts("n1=#{n1}\n\n")
+puts("\nn1=#{n1}\n\n")
 
 # One line begin..end block loop
 n1 = 0
+begin print("n1=#{n1} "); n1 += 1 end while n1 < 13
+puts("\nn1=#{n1}\n")
+
+begin print("n1=#{n1} "); n1 -= 1 end while n1 > 0
+puts("\nn1=#{n1}")
 
 # Only the statement that directly precedes while is part of the logic loop.
 n = 0
