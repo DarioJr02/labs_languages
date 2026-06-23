@@ -104,4 +104,4 @@ puts("\n")
 
 # Single line loop
 puts("\nSingle line loop:")
-loop { print("#{arr2[i]} "); i += 1; break if i == arr2.length } # => Use .each method or slice it in multiple lines.
+loop { print("#{arr2[i]} "); i += 1; break if i == arr2.length } # => Use .each preferred or slice it in multiple lines.
