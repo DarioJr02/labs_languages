@@ -4,4 +4,4 @@
 
 # .collect method.
 x = (5..10).to_a.collect { |x| x * 2 }
-puts(x)
+puts("x=#{x} | type=#{x.class}")
