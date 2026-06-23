@@ -22,7 +22,7 @@ end
 n1 = 0
 
 # This loop will be executed correctly.
-puts("\n1: while loop:")
+puts("\n1: Multiline while loop:")
 while n1 < 5 # => do is optional.
   n1 += 1
   # Does same result => n1 = (n + 1) || n1 = n + 1
@@ -33,12 +33,12 @@ n1 = 0
 puts(n1)
 
 # Single line while loops => while modifier
-puts("\n2: Single line while loop:")
+puts("\n2: Single line while loop (NOT RECOMMENDED):")
 n1 += 1 while n1 < 5
 print("n1=#{n1}\n\n")
 
 # begin..end blocks.
-puts("\n3: begin..end block:")
+puts("\n3: Multiline begin..end block (NOT RECOMMENDED):")
 n1 = 0
 puts("n1=#{n1}\n\n")
 
@@ -50,7 +50,7 @@ end while n1 < 10
 puts("\nn1=#{n1}\n\n")
 
 # One line begin..end block loop
-puts("\n4: Single line begin..end block:")
+puts("\n4: Single line begin..end block (NOT RECOMMENDED):")
 n1 = 0
 begin print("n1=#{n1} "); n1 += 1 end while n1 < 13
 puts("\nn1=#{n1}\n")
@@ -59,12 +59,21 @@ begin print("n1=#{n1} "); n1 -= 1 end while n1 > 0
 puts("\nn1=#{n1}")
 
 # until loops.
-puts("\n5: until loops:")
+puts("\n5: multiline until loops (RECOMMENDED):")
 
 until n1 == (27 / 3) # => do is optional.
   n1 += 1
   print("n1=#{n1} ")
 end
+puts("\nn1=#{n1}")
+
+# Single line until loops.
+puts("\n6:Single line until loops (NOT RECOMMENDED):")
+n1 = 0
+until n1 == (4 * 3) do print("n1=#{n1}"); n1 += 1 end
+puts("\nn1=#{n1}\n\n")
+
+until n1 == (200 - 200) do print("n1=#{n1}"); n1 -= 1 end
 puts("\nn1=#{n1}")
 
 # Only the statement that directly precedes while is part of the logic loop.
