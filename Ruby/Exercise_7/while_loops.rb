@@ -42,15 +42,29 @@ n1 = 0
 puts(n1)
 
 n1 += 1 while n1 < 5
-print("\nn1=#{n1}\n")
+print("\nn1=#{n1}\n\n")
+
+# Another valid syntax.
+n1 = 0
+puts("n1=#{n1}\n\n")
+
+begin
+  print("n1=#{n1} ")
+  n1 += 1
+end while n1 < 10
+
+puts("n1=#{n1}\n\n")
+
+# One line begin..end block loop
+n1 = 0
 
 # Only the statement that directly precedes while is part of the logic loop.
 n = 0
 n1 = 0
 
-n1 += 1 while n1 < 5
+# n1 += 1 while n1 < 5
 
 # n += 1; n1 += 1 while n1 < 5
 
 # We now check the value of each variable.
-puts("n=#{n}, n1=#{n1}")
+# puts("n=#{n}, n1=#{n1}")
