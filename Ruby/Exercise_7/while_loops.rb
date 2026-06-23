@@ -13,12 +13,44 @@ flag = true
 # puts(true) while 3.step(10) { |i| print("#{i} ") } < 10
 
 n = 0
+# This loop never will be executed.
+while n > 3
+  n += 1
+  print("n=#{n}")
+end
 
-while n < 13
+# This loop will be executed correctly.
+while n < 7
   puts("n < 13 ?: #{flag}")
   n = (n + 1)
   print("#{n} ")
 
-  n >= 13 ? puts('n >= 13') : puts('n <= 13')
+  n >= 7 ? puts('n >= 13') : puts('n <= 13')
+end
+
+n1 = 1
+
+while n1 < 5
+  n1 += 1
+  # Does same result => n1 = (n + 1) || n1 = n + 1
+  print("n1=#{n1}")
 end
 puts("\n")
+n1 = 0
+
+# Single line while loops => while modifier
+puts(n1)
+
+n1 += 1 while n1 < 5
+print("\nn1=#{n1}\n")
+
+# Only the statement that directly precedes while is part of the logic loop.
+n = 0
+n1 = 0
+
+n1 += 1 while n1 < 5
+
+# n += 1; n1 += 1 while n1 < 5
+
+# We now check the value of each variable.
+puts("n=#{n}, n1=#{n1}")
