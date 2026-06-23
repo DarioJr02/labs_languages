@@ -22,7 +22,7 @@ end
 n1 = 0
 
 # This loop will be executed correctly.
-puts("\n1: Multiline while loop:")
+puts("\n1: Multiline while loop (RECOMMENDED):")
 while n1 < 5 # => do is optional.
   n1 += 1
   # Does same result => n1 = (n + 1) || n1 = n + 1
@@ -33,7 +33,7 @@ n1 = 0
 puts(n1)
 
 # Single line while loops => while modifier
-puts("\n2: Single line while loop (NOT RECOMMENDED):")
+puts("\n2: Single line while loop (-ONLY IF THE LOGIC BEFORE WHILE-):")
 n1 += 1 while n1 < 5
 print("n1=#{n1}\n\n")
 
@@ -59,7 +59,7 @@ begin print("n1=#{n1} "); n1 -= 1 end while n1 > 0
 puts("\nn1=#{n1}")
 
 # until loops.
-puts("\n5: multiline until loops (RECOMMENDED):")
+puts("\n5: Multiline until loops (RECOMMENDED):")
 
 until n1 == (27 / 3) # => do is optional.
   n1 += 1
