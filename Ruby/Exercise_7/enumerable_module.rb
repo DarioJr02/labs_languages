@@ -50,13 +50,20 @@ max value in z is -> #{z.max}\n")
 # Enumerable methods with hashes
 print("\nEnumerable methods with hashes:\n")
 
-h = { 'me' => 'c',
-      'you' => 'c++',
+h = { 'me' => 'c#',
+      'you' => 'c',
       'he' => 'go',
-      'her' => 'golang',
+      'her' => 'c++',
       'him' => 'rust' }
 puts(h)
 # .collect
 c = h.collect { |i| i }
 print("\nAfter apply .collect method:\n#{c}
   \nWe can use some other methods like .flatten:\n#{c.flatten}\n")
+
+print("\nh min value is: #{h.min} and h max value is: #{h.max}\n")
+
+# comparing based on keys
+puts("Getting min value based on keys: #{h.min { |x, y| x[0].length <=> y[0].length }}")
+puts("Getting min based on values: #{h.min { |x, y| x[1].length <=> y[1].length }}")
+# comparing based on values
