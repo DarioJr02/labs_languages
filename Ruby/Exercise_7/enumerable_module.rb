@@ -10,7 +10,7 @@ puts("x=#{x} | type=#{x.class}")
 y = ('a'..'g').to_a.collect { |x| x.upcase }
 puts("y=#{y} | type=#{y.class}")
 
-z = ('y'..'z').to_a.collect { |x| x.ord * x.ord }
+z = ('P'..'Z').to_a.collect { |x| x.downcase }
 puts("z=#{z} | type=#{z.class}")
 
 # .include method
@@ -29,3 +29,7 @@ y_p = y.include?(value_to_find_y)
 puts("y has the value: #{value_to_find_y}? -> #{y_p}")
 
 # Find a value in z
+puts("\nTell me a value to find in z: ")
+v_to_find_z = gets.chomp
+z_p = z.include?(v_to_find_z)
+puts("z has the value: #{v_to_find_z}? -> #{z_p}")
