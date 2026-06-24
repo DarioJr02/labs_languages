@@ -46,3 +46,12 @@ print("\n4: .max:")
 print("\nmax value in x is -> #{x.max}\n
 max value in y is -> #{y.max}\n
 max value in z is -> #{z.max}\n")
+
+# Enumerable methods with hashes
+print("\nEnumerable methods with hashes:")
+
+h = { 'me' => 'c',
+      'you' => 'c++',
+      'he' => 'go',
+      'her' => 'golang',
+      'him' => 'rust' }
