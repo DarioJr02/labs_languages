@@ -35,10 +35,14 @@ z_p = z.include?(v_to_find_z)
 puts("z has the value: #{v_to_find_z}? -> #{z_p}")
 
 # .min
-puts("\n3: .min():")
+print("\n3: .min:")
 
 print("\nmin value in x is -> #{x.min}\n
 min value in y is -> #{y.min}\n
 min value in z is -> #{z.min}\n")
 
 # .max
+print("\n4: .max:")
+print("\nmax value in x is -> #{x.max}\n
+max value in y is -> #{y.max}\n
+max value in z is -> #{z.max}\n")
