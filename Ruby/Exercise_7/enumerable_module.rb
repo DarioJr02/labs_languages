@@ -64,6 +64,9 @@ print("\nAfter apply .collect method:\n#{c}
 print("\nh min value is: #{h.min} and h max value is: #{h.max}\n")
 
 # comparing based on keys
-puts("Getting min value based on keys: #{h.min { |x, y| x[0].length <=> y[0].length }}")
-puts("Getting min based on values: #{h.min { |x, y| x[1].length <=> y[1].length }}")
+puts("Getting min value based on keys length: #{h.min { |x, y| x[0].length <=> y[0].length }}")
+puts("Getting max value based on keys length: #{h.min { |x, y| x[0].length <=> y[0].length }}")
+
 # comparing based on values
+puts("Getting min value based on values length: #{h.min { |x, y| x[1].length <=> y[1].length }}")
+puts("Getting max value based on values length: #{h.max { |x, y| x[1].length <=> y[1].length }}")
