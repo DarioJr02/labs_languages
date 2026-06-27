@@ -37,7 +37,7 @@ puts('Hurrah! (Using &&/||/!).') if a_day == 'Saturday' || a_day = 'Saturday' &&
 # 3. === Case equality operator => It returns a boolean value.
 
 # checking object class type.
-puts("\nCheking object clas type:\n")
+puts("\nCheking object class type:\n")
 puts(String === 's')
 puts(Integer === 3.4.to_int)
 puts(Float === 3.4)
@@ -53,3 +53,13 @@ puts(('g'..'r').include?('h'))
 # verifying patterns
 puts("\nVerifying patterns:")
 puts(/^[A-Z]/ === 'dolar')
+
+# 4. unless tests.
+puts("\nunless tests:")
+day = 'Monday'
+
+unless day == 'Saturday' || day == 'Sunday' then # then ==> optional
+  puts('Work and study.')
+end
+
+puts('Work and study.') unless day == 'Saturday' || day == 'Sunday'
