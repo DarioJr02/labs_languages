@@ -52,3 +52,4 @@ puts(('g'..'r').include?('h'))
 
 # verifying patterns
 puts("\nVerifying patterns:")
+puts(/^[A-Z]/ === 'dolar')
