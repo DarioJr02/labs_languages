@@ -37,6 +37,7 @@ puts('Hurrah! (Using &&/||/!).') if a_day == 'Saturday' || a_day = 'Saturday' &&
 # 3. === Case equality operator => It returns a boolean value.
 
 # checking object class type.
+puts("\nCheking object clas type:\n")
 puts(String === 's')
 puts(Integer === 3.4.to_int)
 puts(Float === 3.4)
@@ -44,4 +45,10 @@ puts(Range === ('b'..'h'))
 puts(Range === ('b'..'h').to_a)
 puts(Hash === {'Victor' => 9})
 
-puts(('a'..'r') === 'k') # 
+# checking if a value is in a range.
+puts("\nCheking if a value is in a range:")
+puts(('a'..'r') === 'k')
+puts(('g'..'r').include?('h'))
+
+# verifying patterns
+puts("\nVerifying patterns:")
