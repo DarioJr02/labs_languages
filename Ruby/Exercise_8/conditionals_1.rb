@@ -74,3 +74,4 @@ puts('Work and study.') if !(day == 'Saturday' || day == 'Sunday')
 
 # .include? Preferred instead comparing a value with multiple items in conditional test when var type is Array.
 puts('Work and study.') unless day.include?('Saturday') || day.include?('Sunday')
+puts('Work and study.') if !day.include?('Saturday') || !day.include?('Sunday')
