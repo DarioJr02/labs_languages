@@ -62,4 +62,12 @@ unless day == 'Saturday' || day == 'Sunday' then # then ==> optional
   puts('Work and study.')
 end
 
+if !day.include?('Saturday') || !day.include?('Sunday')
+  puts('Work and study.')
+else
+  puts('Off day.')
+end
+
+# Single line if and unless tests.
 puts('Work and study.') unless day == 'Saturday' || day == 'Sunday'
+puts('Work and study.') if !(day == 'Saturday' || day == 'Sunday')
