@@ -6,7 +6,7 @@
 
 day_weather = 'Raining'
 
-if (day_weather == 'raining'.capitalize)
+if day_weather == 'raining'.capitalize
   puts('Use an umbrella.')
 
 else
@@ -17,7 +17,7 @@ end
 day_weather = 'sunny'.capitalize
 
 puts('Use some sun cream.') if day_weather == 'Sunny'
-if day_weather == 'Sunny' then puts('Use some sun cream.') end
+puts('Use some sun cream.') if day_weather == 'Sunny'
 # if day_weather == 'Sunny' : puts('Use some sun cream.') # Works in Ruby 1.8 only.
 
 # 2. Operators and precedence.
@@ -27,10 +27,9 @@ if day_weather == 'Sunny' then puts('Use some sun cream.') end
 a_day = 'Saturday'
 working_overtime = true
 
-
-
-puts('Hurrah!') if a_day == 'Saturday' or a_day == 'Sunday' and not working_overtime # and has a higher precedence than or.
-puts('Hurrah!') if a_day == 'Saturday' or (a_day == 'Sunday' and not working_overtime)
+# and has a higher precedence than or.
+puts('Hurrah!') if %w[Saturday Sunday].include?(a_day) and !working_overtime
+puts('Hurrah!') if a_day == 'Saturday' or (a_day == 'Sunday' and !working_overtime)
 
 puts('Hurrah! (Using &&/||/!).') if a_day == 'Saturday' || a_day = 'Saturday' && !working_overtime
 
@@ -38,16 +37,16 @@ puts('Hurrah! (Using &&/||/!).') if a_day == 'Saturday' || a_day = 'Saturday' &&
 
 # checking object class type.
 puts("\nCheking object class type:\n")
-puts(String === 's')
-puts(Integer === 3.4.to_int)
-puts(Float === 3.4)
-puts(Range === ('b'..'h'))
-puts(Range === ('b'..'h').to_a)
-puts(Hash === {'Victor' => 9})
+puts('s'.is_a?(String))
+puts(3.4.to_int.is_a?(Integer))
+puts(3.4.is_a?(Float))
+puts(('b'..'h').is_a?(Range))
+puts(('b'..'h').to_a.is_a?(Range))
+puts({ 'Victor' => 9 }.is_a?(Hash))
 
 # checking if a value is in a range.
 puts("\nCheking if a value is in a range:")
-puts(('a'..'r') === 'k')
+puts(('a'..'r').include?('k'))
 puts(('g'..'r').include?('h'))
 
 # verifying patterns
@@ -58,9 +57,7 @@ puts(/^[A-Z]/ === 'dolar')
 puts("\nunless tests:")
 day = 'Monday'
 
-unless day == 'Saturday' || day == 'Sunday' then # then ==> optional
-  puts('Work and study.')
-end
+puts('Work and study.') unless %w[Saturday Sunday].include?(day) # then ==> optional
 
 if !day.include?('Saturday') || !day.include?('Sunday')
   puts('Work and study.')
@@ -69,8 +66,8 @@ else
 end
 
 # Single line if and unless tests.
-puts('Work and study.') unless day == 'Saturday' || day == 'Sunday'
-puts('Work and study.') if !(day == 'Saturday' || day == 'Sunday')
+puts('Work and study.') unless %w[Saturday Sunday].include?(day)
+puts('Work and study.') unless %w[Saturday Sunday].include?(day)
 
 # .include? Preferred instead comparing a value with multiple items in conditional test when var type is Array.
 puts('Work and study.') unless day.include?('Saturday') || day.include?('Sunday')
