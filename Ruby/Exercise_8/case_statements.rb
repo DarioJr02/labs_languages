@@ -27,10 +27,10 @@ end
 # Example 2.
 def print_day2(day)
   case day
-  when 1..3 then puts('Go home early.')
-                 puts("It's Monday") if day == 1
-                 puts("It's Tuesday") if day == 2
-                 puts("It's Wednesday.") if day == 3
+  when 1, 2, 3 then puts('Go home early.')
+                    puts("It's Monday") if day == 1
+                    puts("It's Tuesday") if day == 2
+                    puts("It's Wednesday.") if day == 3
 
   when 4 then puts("It's Thursday.")
   when 5 then puts("It's Friday.\nNearly Weekend.")
