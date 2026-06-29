@@ -53,7 +53,7 @@ def print_day3(day)
 
   when 4 then puts("It's Thursday.")
   when 5 then puts("It's Friday.\nNearly Weekend.")
-  when 6, 7 then puts("It's weekend.")
+  when 6..7 then puts("It's weekend.")
                  puts('Saturday.') if day == 6
                  puts('Sunday.') if day == 7
 
@@ -68,7 +68,8 @@ print_day3(a_day)
 # case as a expression.
 puts("\nCase as a expression.")
 
-language_to_learn = 'Rust'
+puts("\nTell me a programming language do you want to learn: ")
+language_to_learn = gets.to_s.chomp
 
 advice = case language_to_learn
          when 'C++', 'Rust' then "#{language_to_learn} learning curve IS NOT beginner friendly."
