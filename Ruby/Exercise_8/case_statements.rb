@@ -8,6 +8,7 @@ puts("Case Statements:\n")
 puts("\nGive me a day of the week with a number (1-7):")
 a_day = gets.chomp.to_i
 
+# Example 1.
 def print_day(day)
   # This method is to execute a case block.
 
@@ -22,6 +23,7 @@ def print_day(day)
   end
 end
 
+# Example 2.
 def print_day2(day)
   case day
   when 1 then puts("It's Monday.")
@@ -34,9 +36,11 @@ def print_day2(day)
   when 5 then puts("It's Friday.\nNearly Weekend.")
   when 6, 7 then puts('Weekend.')
                  puts('Turn off your phone.') if (6..7).to_a.include?(day)
+  else puts("It's not a real day.")
   end
 end
 
+# Example 3.
 def print_day3(day)
   case day
   when 1 then puts("It's Monday.")
@@ -49,7 +53,10 @@ def print_day3(day)
   when 5 then puts("It's Friday.\nNearly Weekend.")
   when (6..7) then puts('Weekend.')
                    puts('Turn off your phone.') if (6..7).to_a.include?(day)
+  else puts("It's not a real day.")
   end
 end
 
+print_day(a_day)
 print_day2(a_day)
+print_day3(a_day)
