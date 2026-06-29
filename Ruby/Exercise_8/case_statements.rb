@@ -19,44 +19,62 @@ def print_day(day)
   when 4 then puts("It's Thursday.")
   when 5 then puts("It's Friday.")
   when 6, 7 then puts("It's Weekend.")
-  else puts("That's not a real day.")
+
+  else puts("It's not a real day.\n")
   end
 end
 
 # Example 2.
 def print_day2(day)
   case day
-  when 1 then puts("It's Monday.")
-  when 2 then puts("It's Tuesday.")
-  when 3 then puts("It's Wednesday.")
-              # puts('Go home early.') if day == 1 || day == 2 || day == 3
-              # puts('Go home early.') if [1, 2, 3].to_a.include?(day)
-              puts('Go home early.') if (1..3).to_a.include?(day)
+  when 1..3 then puts('Go home early.')
+                 puts("It's Monday") if day == 1
+                 puts("It's Tuesday") if day == 2
+                 puts("It's Wednesday.") if day == 3
+
   when 4 then puts("It's Thursday.")
   when 5 then puts("It's Friday.\nNearly Weekend.")
-  when 6, 7 then puts('Weekend.')
-                 puts('Turn off your phone.') if (6..7).to_a.include?(day)
-  else puts("It's not a real day.")
+
+  when 6, 7 then puts("It's weekend.")
+                 puts('Saturday.') if day == 6
+                 puts('Sunday.') if day == 7
+
+  else puts("It's not a real day.\n")
   end
 end
 
 # Example 3.
 def print_day3(day)
   case day
-  when 1 then puts("It's Monday.")
-  when 2 then puts("It's Tuesday.")
-  when 3 then puts("It's Wednesday.")
-              # puts('Go home early.') if day == 1 || day == 2 || day == 3
-              # puts('Go home early.') if [1, 2, 3].to_a.include?(day)
-              puts('Go home early.') if (1..3).to_a.include?(day)
+  when 1..3 then puts('Go home early.')
+                 puts("It's Monday.") if day == 1
+                 puts("It's Tuesday.") if day == 2
+                 puts("It's Wednesday.") if day == 3
+
   when 4 then puts("It's Thursday.")
   when 5 then puts("It's Friday.\nNearly Weekend.")
-  when (6..7) then puts('Weekend.')
-                   puts('Turn off your phone.') if (6..7).to_a.include?(day)
-  else puts("It's not a real day.")
+  when 6, 7 then puts("It's weekend.")
+                 puts('Saturday.') if day == 6
+                 puts('Sunday.') if day == 7
+
+  else puts("It's not a real day.\n")
   end
 end
 
 print_day(a_day)
 print_day2(a_day)
 print_day3(a_day)
+
+# case as a expression.
+puts("\nCase as a expression.")
+
+language_to_learn = 'Rust'
+
+advice = case language_to_learn
+         when 'C++', 'Rust' then "#{language_to_learn} learning curve IS NOT beginner friendly."
+         when 'Python', 'Go' then "#{language_to_learn} learning curve IS beginner friendly."
+         else
+           'Invalid language.'
+         end
+
+puts(advice)
