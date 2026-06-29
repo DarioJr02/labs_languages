@@ -31,6 +31,9 @@ def print_day2(day)
               # puts('Go home early.') if [1, 2, 3].to_a.include?(day)
               puts('Go home early.') if (1..3).to_a.include?(day)
   when 4 then puts("It's Thursday.")
+  when 5 then puts("It's Friday.\nNearly Weekend.")
+  when 6, 7 then puts('Weekend.')
+                 puts('Turn off your phone.') if (6..7).to_a.include?(day)
   end
 end
 
