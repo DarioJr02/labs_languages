@@ -19,20 +19,28 @@ class Thing
   end
 
   def self.c_method
-    return "This is an id shared by all the instances of the clases ok?" # Return is optional, but recommended.
+    return "This a method class ok?" # Return is optional, but recommended.
   end
 
   # class methods.
   # Use self.method instead MyClass.method for class methods.
   # def Thing.c_method is syntactically correct but unrecommended by style guides.
   def self.c_method1
-    puts('This is a class method.')
+    puts('This is another methdo class ok?')
   end
 end
 
-# Calling method class.
+# Calling instance methods.
+puts('Calling instance methods:')
 obj1 = Thing.new
 obj1.i_method('This my instance method.')
+puts(obj1.i_method1(9, 2))
 
 obj2 = Thing.new
 puts(Thing.c_method)
+puts(obj2.i_method1(5, 2))
+
+# Calling class methods => method class must be called using the class identifier: ClassName.Method.
+puts("\nCalling class methods:")
+puts(Thing.c_method)
+puts(Thing.c_method1)
