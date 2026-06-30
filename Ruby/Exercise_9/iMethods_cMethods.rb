@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-# The goal of this file is to practice instance methods and class methods.
+# The goal of this file is to practice:
+# class methods and instance methods.
+# some Ruby coding guide style advices.
 
 require 'set'
 
@@ -8,18 +10,29 @@ require 'set'
 class Thing
   # Instance methods:
   def i_method(msg)
-    puts('This is a instance method.')
+    puts(msg.capitalize)
   end
 
   # Use +3 length characters for method arguments.
-  def i_method2(val1, val2)
-    return (val1**val2) # Return is optional, but recommended.
+  def i_method1(x, y)
+    return (x**y)
+  end
+
+  def self.c_method
+    return "This is an id shared by all the instances of the clases ok?" # Return is optional, but recommended.
   end
 
   # class methods.
   # Use self.method instead MyClass.method for class methods.
   # def Thing.c_method is syntactically correct but unrecommended by style guides.
-  def self.c_method
+  def self.c_method1
     puts('This is a class method.')
   end
 end
+
+# Calling method class.
+obj1 = Thing.new
+obj1.i_method('This my instance method.')
+
+obj2 = Thing.new
+puts(Thing.c_method)
