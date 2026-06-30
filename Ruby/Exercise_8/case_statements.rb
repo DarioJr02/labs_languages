@@ -75,7 +75,7 @@ advice = case language_to_learn
          when 'C++', 'Rust' then "#{language_to_learn} learning curve IS NOT beginner friendly."
          when 'Python', 'Go' then "#{language_to_learn} learning curve IS beginner friendly."
          else
-           'Invalid language.'
+           "I don't have any books of #{language_to_learn} language."
          end
 
 puts(advice)
