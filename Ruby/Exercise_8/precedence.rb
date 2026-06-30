@@ -12,6 +12,7 @@
 # Using if as expression modifier. => if has a higher precedence.
 puts('true') if !((true) or (true)) || (8.2==8.1)
 
+# Parentheses have a higher precedence at this test.
 if !(true or true) || (9.2==1.3) then
   puts('true')
 else
