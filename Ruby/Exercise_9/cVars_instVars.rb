@@ -4,19 +4,19 @@
 
 # Class to use class and instance vars.
 class Thing
-  @inst_var = 0 # Instance class var.
+  @inst_class_var = 0 # Instance class var.
   @@class_var = 1 # ClassVar.
 
-  def initialize(inst_var1)
-    @inst_var1 = inst_var1 # Instance var.
+  def initialize(inst_var)
+    @inst_var = inst_var # Instance var.
   end
 
   def i_show_vars
-    "@inst_var value: #{@inst_var} | @@class_var value: #{@@class_var}"
+    "@inst_class_var value: #{@inst_class_var} | @inst_var value: #{@inst_var} | @@class_var value: #{@@class_var}"
   end
 
   def self.c_show_vars
-    "@inst_var value: #{@inst_var} | @@class_var value: #{@@class_var}"
+    "@inst_class_var value: #{@inst_class_var} | @inst_var value: #{@inst_var} | @@class_var value: #{@@class_var}"
   end
 end
 
