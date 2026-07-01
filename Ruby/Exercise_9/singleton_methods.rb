@@ -22,7 +22,17 @@ def print_singleton_methods(class_name, class_object)
   puts("#{class_name} Singleton Methods => #{class_object.singleton_methods}")
 end
 
+# Print singleton methods.
+
 print_singleton_methods('IO', IO)
 print_singleton_methods('Class', Class)
 print_singleton_methods('String', String)
 print_singleton_methods('TrueClass', TrueClass)
+print_singleton_methods('AThing', AThing)
+
+# Print singleton class.
+def print_singleton_class(obj)
+  puts("#{obj.singleton_class}")
+end
+
+print_singleton_class(AThing)
