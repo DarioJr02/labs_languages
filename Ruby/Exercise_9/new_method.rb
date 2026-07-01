@@ -13,9 +13,20 @@ class AThing
 
   # instance methods.
   def i_method
-    "This is an instance method: @inst_class_var: #{@inst_class_var} |  @@c_var: #{@@c_var} | @inst_var: #{@inst_var}"
+    return "This is an instance method: @inst_class_var: #{@inst_class_var} |  @@c_var: #{@@c_var} | @inst_var: #{@inst_var}"
+  end
+
+  # class methods.
+  def self.c_method
+    return "This is an instance method: @inst_class_var: #{@inst_class_var} |  @@c_var: #{@@c_var} | @inst_var: #{@inst_var}"    
+  end
+
+  # Overriting new method.
+  def self.new(arg)
+    super
+    return "Overriting .new method is not recommended! | arg: #{arg}"
   end
 end
 
 obj = AThing.new(9.5)
-puts(obj.i_method)
+puts(obj)
