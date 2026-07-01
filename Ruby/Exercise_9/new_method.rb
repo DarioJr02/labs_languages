@@ -24,7 +24,7 @@ class AThing
   # Overriting new method.
   def self.new(arg)
     instance = super
-    puts("Overriting .new method is not recommended! | arg: #{arg}")
+    puts("Overriting .new method is not recommended! | arg: #{arg}".upcase)
 
     return instance
   end
