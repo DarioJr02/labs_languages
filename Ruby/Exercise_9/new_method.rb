@@ -23,10 +23,12 @@ class AThing
 
   # Overriting new method.
   def self.new(arg)
-    super
-    return "Overriting .new method is not recommended! | arg: #{arg}"
+    instance = super
+    puts("Overriting .new method is not recommended! | arg: #{arg}")
+
+    return instance
   end
 end
 
-obj = AThing.new(9.5)
-puts(obj)
+obj = AThing.new(('a'..'f').to_a)
+puts(obj.class)
