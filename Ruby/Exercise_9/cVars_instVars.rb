@@ -28,8 +28,3 @@ puts(Thing.c_show_vars)
 
 puts(Thing.class) # Thing is a Class object.
 puts(Thing.methods)
-puts('okdoasdokd')
-puts('Hey')
-
-
-

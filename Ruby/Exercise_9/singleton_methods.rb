@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './new_method.rb'
+require_relative 'new_method'
 
 # The goal of this file is to practice singleton methods.
 
@@ -12,4 +12,7 @@ puts("AThing.class => #{AThing.class}",
      "Float.class => #{Float.class}",
      "True.class => #{TrueClass.class}",
      "False.class => #{FalseClass.class}",
-     "")
+     "Array.class => #{Array.class}",
+     "Range.class => #{Range.class}",
+     "Hash.class => #{Hash.class}",
+     "Class.class => #{Class.class}")
