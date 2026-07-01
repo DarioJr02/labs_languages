@@ -20,6 +20,8 @@ class Thing
   end
 end
 
-obj = Thing.new(3)
+obj = Thing.new(3) # obj is a Thing object.
 puts(obj.i_show_vars)
 puts(Thing.c_show_vars)
+
+puts(Thing.class) # Thing is a Class object.
