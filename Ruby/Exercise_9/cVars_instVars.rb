@@ -12,10 +12,12 @@ class Thing
   end
 
   def i_show_vars
+    # Check if inst_class_var returns nil.
     "@inst_class_var value: #{@inst_class_var} | @inst_var value: #{@inst_var} | @@class_var value: #{@@class_var}"
   end
 
   def self.c_show_vars
+    # check if inst_var returns nil.
     "@inst_class_var value: #{@inst_class_var} | @inst_var value: #{@inst_var} | @@class_var value: #{@@class_var}"
   end
 end
@@ -25,3 +27,7 @@ puts(obj.i_show_vars)
 puts(Thing.c_show_vars)
 
 puts(Thing.class) # Thing is a Class object.
+puts(Thing.methods)
+puts('okdoasdokd')
+puts('Hey')
+
