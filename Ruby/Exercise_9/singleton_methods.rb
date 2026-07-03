@@ -2,8 +2,9 @@
 
 require_relative 'new_method'
 
-# The goal of this file is to practice singleton methods.
+# The goal of this file is to practice singleton methods and view the hierarchy class in Ruby.
 
+# 1. Viewwing hierarchy clsas in Ruby.
 puts("1. Singleton methods:\n")
 
 puts("AThing.class => #{AThing.class}",
@@ -51,3 +52,32 @@ print("\n")
 show_family_class(Class)
 print("\n")
 show_family_class(NilClass)
+
+# 2. Singleton methods.
+class Profession
+  # 1.
+  def initialize(profession, commonly_task)
+    @profession = { profession => commonly_task }
+  end
+
+  # 2.
+  def do_something
+    puts("Profession=#{@profession.keys}, task=#{@profession.values}")
+  end
+end
+
+# 3. Creating Profession objects.
+puts("\nCreating and printing singleton methods:")
+
+photographer = Profession.new('Photographer', 'take a picture.')
+puts(photographer.do_something)
+
+video_editor = Profession.new('Video editor', 'cut a clip.')
+puts(video_editor.do_something)
+
+# Singleton method to photographer.
+def photographer.learn_more
+  puts("I'm a photographer, but i like to learn some video editing skills like cut clips.}")
+end
+
+puts(photographer.learn_more)
