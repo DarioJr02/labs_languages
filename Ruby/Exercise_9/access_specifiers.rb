@@ -14,19 +14,19 @@ class Profession
     print("My most common task as a #{@profession.keys} is #{@profession.values}")
   end
 
-  def rest
-    print(sleep)
+  def rest(hours)
+    print(sleep(hours))
   end
 
   # private mehtods
   private
 
-  def sleep
-    return "I need to rest to do my work tomorrow."
+  def sleep(hours)
+    return "I need to rest #{hours} hours to do my work tomorrow."
   end
 end
 
 football_player = Profession.new('Football player', 'running.')
 
 puts(football_player.do_task)
-puts(football_player.rest)
+puts(football_player.rest(3))
