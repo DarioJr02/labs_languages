@@ -94,4 +94,4 @@ puts('The photographer is learning more.') if photographer.respond_to?(:learn_mo
 # Checking if a method exist in a Class object.
 Profession.method_defined?(:do_something) ? puts('yes') : puts('no')
 File.method_defined?(:do_something) ? puts('yes') : puts('no')
-Class.method_defined?(:to_s) ? puts('yes') : puts('no')
+Class.method_defined?('to_s') ? puts('yes') : puts('no') # => 'to_s'.to_sym
