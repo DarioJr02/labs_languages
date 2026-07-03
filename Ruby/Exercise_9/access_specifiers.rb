@@ -4,9 +4,9 @@
 
 # 1. Profession Class.
 class Profession
-  public # => is initialize public by default?
-  def initialize(profession, common_task)
+  def initialize(profession, common_task, age)
     @profession = { profession => common_task }
+    @age = age
   end
 
   # do_task
@@ -19,14 +19,40 @@ class Profession
   end
 
   # private mehtods
+  # ----------------------------------------------------------------
   private
 
   def sleep(hours)
     return "I need to rest #{hours} hours to do my work tomorrow."
   end
+  # ----------------------------------------------------------------
+
+  # protected methods ==> To compare values that are siblings (instances of the same class).
+  public
+
+  def compare_ages(other)
+    if age > other.age
+      puts("#{@profession.keys} is older.")
+    else
+      puts("#{other.profession} is older.")
+    end
+  end
+
+  protected
+
+  def age
+    return @age
+  end
+
+  def profession
+    return @profession.keys
+  end
 end
 
-football_player = Profession.new('Football player', 'running.')
+# ----------------------------------------------------------------
+# 3. Instance class objects.
+football_player = Profession.new('Football player', 'running.', 35)
 
-puts(football_player.do_task)
-puts(football_player.rest(3))
+boxer = Profession.new('Boxer', 'running.', 36)
+
+football_player.compare_ages(boxer)
