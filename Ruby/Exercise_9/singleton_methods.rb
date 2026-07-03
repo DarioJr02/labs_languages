@@ -81,3 +81,12 @@ def photographer.learn_more
 end
 
 puts(photographer.learn_more)
+
+# puts(video_editor.learn_more) # => undefined method.
+
+# 4. Checking if a singleton method exist using .include?() => .include?() .singleton_methods returns an Array of symbols.
+puts('The photographer is learning more.') if photographer.singleton_methods.include?(:learn_more)
+
+# Checking if a method exist using .respond_to?() ...
+# => if 1arg == String, it'll be converted to a symbol, 2nd_arg to avoid inherited methods.
+puts('The photographer is learning more.') if photographer.respond_to?(:learn_more, false)
