@@ -25,6 +25,7 @@ end
 
 puts(baseball_player.play_another_position)
 puts("Does Profession Class have any singleton method? ==> #{Profession.singleton_methods.any?}")
-puts("Does Profession Class have any singleton method? ==> #{Profession.singleton_methods.any?}")
+puts("Is Profession.singleton_methods Array empty? ==> #{Profession.singleton_methods.empty?}")
 
 # 3. Opening baseball_player eigen/singleton class.
+
