@@ -28,4 +28,28 @@ puts("Does Profession Class have any singleton method? ==> #{Profession.singleto
 puts("Is Profession.singleton_methods Array empty? ==> #{Profession.singleton_methods.empty?}")
 
 # 3. Opening baseball_player eigen/singleton class.
+puts("\nOpening baseball_player singleton class:")
 
+class << baseball_player
+  def studying_to_be_a_manager
+    puts("I'm studying to be a baseball manager.")
+  end
+end
+
+if baseball_player.singleton_methods.include?(:studying_to_be_a_manager)
+  baseball_player.studying_to_be_a_manager
+else
+  puts("I'm not studying for now.")
+end
+
+if baseball_player.respond_to?(:studying_to_be_a_manager)
+  baseball_player.studying_to_be_a_manager
+else
+  puts("I'm not studying for now.")
+end
+
+if baseball_player.class.method_defined?('studying_to_be_a_manager')
+  baseball_player.studying_to_be_a_manager
+else
+  puts("Method not defined for #{baseball_player.class}.")
+end
