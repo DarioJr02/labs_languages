@@ -35,4 +35,19 @@ def print_singleton_class(obj)
   puts("#{obj.singleton_class}")
 end
 
-print_singleton_class(AThing)
+print_singleton_class("#{AThing}")
+
+puts("\nRecurse class hierarchy:")
+
+def show_family_class(a_class)
+  unless (a_class.nil?)
+    puts("#{a_class} about to recurse with a_class.superclass = #{a_class.superclass.inspect}")
+    show_family_class(a_class.superclass)
+  end
+end
+
+show_family_class(AThing)
+print("\n")
+show_family_class(Class)
+print("\n")
+show_family_class(NilClass)
