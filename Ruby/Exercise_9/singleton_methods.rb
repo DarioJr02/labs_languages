@@ -87,6 +87,11 @@ puts(photographer.learn_more)
 # 4. Checking if a singleton method exist using .include?() => .include?() .singleton_methods returns an Array of symbols.
 puts('The photographer is learning more.') if photographer.singleton_methods.include?(:learn_more)
 
-# Checking if a method exist using .respond_to?() ...
+# Checking if a method exist using in an object .respond_to?() ...
 # => if 1arg == String, it'll be converted to a symbol, 2nd_arg to avoid inherited methods.
 puts('The photographer is learning more.') if photographer.respond_to?(:learn_more, false)
+
+# Checking if a method exist in a Class object.
+Profession.method_defined?(:do_something) ? puts('yes') : puts('no')
+File.method_defined?(:do_something) ? puts('yes') : puts('no')
+Class.method_defined?(:to_s) ? puts('yes') : puts('no')
