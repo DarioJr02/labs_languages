@@ -77,7 +77,15 @@ class Other
   def secret(s)
     return "I can't eat #{s}."
   end
+
+  protected
+  
+  def protecting(what_are_you_protecting)
+    return "I'm protecting my #{what_are_you_protecting}."
+  end
 end
 
+# .send executes private and protected methods.
 o = Other.new('Something')
 puts(o.send(:secret, 'Seafood'))
+puts(o.send(:protecting, 'privacy'))
