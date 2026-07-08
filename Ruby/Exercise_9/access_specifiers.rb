@@ -79,9 +79,22 @@ class Other
   end
 
   protected
-  
+
   def protecting(what_are_you_protecting)
     return "I'm protecting my #{what_are_you_protecting}."
+  end
+
+  # class methods (another syntax).
+  class << self
+    def method_a(arg)
+      return arg
+    end
+
+    private
+
+    def method_b(arg)
+      return arg
+    end
   end
 end
 
@@ -89,3 +102,7 @@ end
 o = Other.new('Something')
 puts(o.send(:secret, 'Seafood'))
 puts(o.send(:protecting, 'privacy'))
+
+puts("\nCalling singleton methods with another syntax: #{Other.method_a(:Hey)}")
+# puts(Other.method_b(321)) # => This will result in (NoMethodError)
+# puts("\nCalling private singleton methods using .send(): #{Other.send(:method_a)}") # => This don't work.
