@@ -23,11 +23,11 @@ class Profession
   private
 
   def sleep(hours)
-    return "I need to rest #{hours} hours to do my work tomorrow."
+    "I need to rest #{hours} hours to do my work tomorrow."
   end
 
   def secret
-    return "This is a secret."
+    'This is a secret.'
   end
   # ----------------------------------------------------------------
 
@@ -44,12 +44,10 @@ class Profession
 
   protected
 
-  def age
-    return @age
-  end
+  attr_reader :age
 
   def profession
-    return @profession.keys
+    @profession.keys
   end
 end
 
@@ -75,25 +73,26 @@ class Other
   private
 
   def secret(s)
-    return "I can't eat #{s}."
+    "I can't eat #{s}."
   end
 
   protected
 
   def protecting(what_are_you_protecting)
-    return "I'm protecting my #{what_are_you_protecting}."
+    "I'm protecting my #{what_are_you_protecting}."
   end
 
   # class methods (another syntax).
-  class << self
+
+  class << Other
     def method_a(arg)
-      return arg
+      arg
     end
 
     private
 
     def method_b(arg)
-      return arg
+      arg
     end
   end
 end
