@@ -25,6 +25,10 @@ class Profession
   def sleep(hours)
     return "I need to rest #{hours} hours to do my work tomorrow."
   end
+
+  def secret
+    return "This is a secret."
+  end
   # ----------------------------------------------------------------
 
   # protected methods ==> To compare values that are siblings (instances of the same class).
@@ -56,3 +60,24 @@ football_player = Profession.new('Football player', 'running.', 35)
 boxer = Profession.new('Boxer', 'running.', 36)
 
 football_player.compare_ages(boxer)
+
+# Calling .send() method.
+puts("Calling .send() method:
+#{boxer.send(:secret)}
+#{football_player.send(:secret)}")
+
+# Definying another class.
+class Other
+  def initialize(something)
+    @something = something
+  end
+
+  private
+
+  def secret(s)
+    return "I can't eat #{s}."
+  end
+end
+
+o = Other.new('Something')
+puts(o.send(:secret, 'Seafood'))
