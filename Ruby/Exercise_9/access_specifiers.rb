@@ -105,3 +105,19 @@ puts(o.send(:protecting, 'privacy'))
 puts("\nCalling singleton methods with another syntax: #{Other.method_a(:Hey)}")
 # puts(Other.method_b(321)) # => This will result in (NoMethodError)
 # puts("\nCalling private singleton methods using .send(): #{Other.send(:method_a)}") # => This don't work.
+
+class T_Methods
+  def x
+    puts('x')
+    def y
+      puts('y')
+    end
+
+    def z
+      puts('z')
+    end
+  end
+end
+
+o1 = T_Methods.new
+puts(o1.x)
