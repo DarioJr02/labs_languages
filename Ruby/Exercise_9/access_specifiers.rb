@@ -106,6 +106,8 @@ puts("\nCalling singleton methods with another syntax: #{Other.method_a(:Hey)}")
 # puts(Other.method_b(321)) # => This will result in (NoMethodError)
 # puts("\nCalling private singleton methods using .send(): #{Other.send(:method_a)}") # => This don't work.
 
+# Nested Methods
+puts("\nCalling nested methods:")
 class T_Methods
   def x
     puts('x')
