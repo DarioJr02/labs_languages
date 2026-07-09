@@ -7,11 +7,17 @@ def pass(name, new_name)
   name = new_name
 
   msg = "Now i'm #{name} | Object id ==> #{name.object_id}"
-  puts("AT METHOD PASS ==> #{msg}")
+  puts("-----AT METHOD----- pass ==> #{msg}")
 
   return msg
 end
 
+def pass_mut(name, new_name)
+  name << new_name
+end
+
+# 1. pass(name_ new_name)
+# ---------------------------------------------------------------------------------
 # Mark
 n = 'Mark'
 puts("#{n}:\n")
@@ -34,4 +40,7 @@ n2_id = n2.object_id
 pass(n2, 'Miguel')
 puts("Is my name #{n2}? ==> #{n2.eql?('Carlos') ? 'Yes' : "No, my name is #{n2}"}")
 puts("Is my id still #{n2_id}? ==> #{n2.object_id.eql?(n2_id)}")
+# ---------------------------------------------------------------------------------
 
+# 2. pass_mut(name, new_name)
+# pass_mut(n, 'John')
