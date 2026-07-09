@@ -6,11 +6,6 @@
 
 # This class is to practice the returning value concept.
 class Item
-  def initialize(arg1, arg2)
-    @arg1 = arg1
-    @arg2 = arg2
-  end
-
   # Singleton methods
   class << self
     # 1. Returns: nil.
