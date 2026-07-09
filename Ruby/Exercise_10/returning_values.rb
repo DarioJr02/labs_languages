@@ -24,13 +24,17 @@ class Item
     # 3. Explicit return, ends the method inmediately.
     def r3(arg)
       return (arg**3 * -1).to_f
+      # return (arg + 3) / (3 * 1) # => This will never be executed.
     end
 
     # 4. Implicit return of multiple values.
     def r4_mult_values(arg1, arg2, arg3)
       # arg1, arg2, arg3 # => Error.
 
+      # return arg1, arg2, arg3 # => Ok, but not recommended by guide style.
+
       [arg1 * 1, arg2 * 2, arg3 * 3] # => Explicit Array, OK.
+
       # return [arg1, arg2, arg3] # => OK.
     end
 
