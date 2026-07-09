@@ -50,3 +50,7 @@ puts("Return value of r2 ==> #{Item.r2(3.59)} and its type ==> #{Item.r2(3.59).c
 puts("Return value of r3 ==> #{Item.r3(9.3)} and its type ==> #{Item.r3(9.3).class}")
 puts("Return value of r4 ==> #{Item.r4_mult_values(8, 9, 10)} and its type ==> #{Item.r4_mult_values(8, 9, 10).class}")
 puts("Return value of ret_hash ==> #{Item.ret_hash('Name', 'Miguel')} and its type ==> #{Item.ret_hash(:id, 8).class}")
+
+arr = Item.r4_mult_values((1..3).to_a, (4..6).to_a, (7..9).to_a)
+puts("My array content ==> #{arr}
+My array flatted! ==> #{arr.flatten!}")
