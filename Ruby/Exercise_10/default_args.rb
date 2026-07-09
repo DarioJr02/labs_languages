@@ -18,5 +18,20 @@ puts("h2 key and value ==> #{h2}")
 # puts("h3 key and value ==> #{h3}")
 
 # 2. Class to pratice default arguments.
-class Phone
+class Game
+  def initialize(year, title = 'Uknown', studio = 'Uknown')
+    @year = year
+    @title = title.capitalize
+    @studio = studio
+  end
+
+  def print_game
+    return "game is ==> #{@title}, made in #{@studio} and released in #{@year}"
+  end
 end
+
+g1 = Game.new(2023)
+puts("My favorite ==> #{g1.print_game}\n\n")
+
+g2 = Game.new(2023, 'street fighter 6', 'Capcom')
+puts("My neighbor's favorite ==> #{g2.print_game}")
