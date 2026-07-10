@@ -1,4 +1,4 @@
-## frozen_string_literal: true
+# frozen_string_literal: true
 
 # The goal of this file is to understand ->
 # - Values mutability.
@@ -7,26 +7,33 @@
 # 1. Values mutability.
 puts('1. Values mutability:')
 
-name1 = 'John'
+name1 = 'Jason'
 name2 = 'John'
 
 name1_id = name1.object_id
 name2_id = name2.object_id
 
-puts("name1 ID ==> #{name1_id}")
-puts("name2 ID ==> #{name2_id}")
+puts("name1 ==> #{name1} | ID ==> #{name1_id}")
+puts("name2 ==> #{name2} | ID ==> #{name2_id}")
 
 name2 = 'Jessica'
-puts("name2 ID ==> #{name2.object_id}")
+name2_new_id = name2.object_id
+puts('Result after changing name2 value:')
+puts("name2 ==> #{name2} | ID ==> #{name2_new_id}")
 
-# 2. Mutable operators:
+# 2. Mutable operators: << shovel
 puts("\n2. Mutable opeartors:")
 
-name1 << ' Doe'
-name2 << ' McNeal'
+# name1 << ' Doe'
+
+# name2 << ' McNeal'
 
 puts("name 1 value now is ==> #{name1}.
-  Is its ID the same? ==> #{name1.object_id.equal?(name1_id) ? "Yes, it is." : "No, it's #{name1.object_id}"}")
+Is its ID the same? ==> #{name1.object_id.equal?(name1_id) ? 'Yes, it is.' : "No, it's #{name1.object_id}"}")
 
 puts("name 2 value now is ==> #{name2}.
 Is its ID the same? ==> #{name2.object_id.equal?(name2_id) ? 'Yes, it is.' : "No, it's #{name2.object_id}"}")
+
+# 2. Mutable methods:
+#name1.replace('Manny')
+#puts(name1.object_id)
