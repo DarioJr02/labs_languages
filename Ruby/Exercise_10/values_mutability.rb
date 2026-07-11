@@ -35,5 +35,5 @@ puts("name 2 value now is ==> #{name2}.
 Is its ID the same? ==> #{name2.object_id.equal?(name2_id) ? 'Yes, it is.' : "No, it's #{name2.object_id}"}")
 
 # 2. Mutable methods:
-#name1.replace('Manny')
-#puts(name1.object_id)
+# name1.replace('Manny')
+# puts(name1.object_id)
