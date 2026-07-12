@@ -20,7 +20,7 @@ end
 # 2. Check if a value is canonical.
 
 def compare_id(obj1, obj2)
-  puts(obj1.object_id.equal?(obj2.object_id) ? "#{obj1} is a canonical value | Type = #{obj1.class}" : "#{obj1.class} it's not a canonical value.")
+  puts(obj1.object_id.equal?(obj2.object_id) ? "#{obj1} is a canonical value | Type = #{obj1.class}" : "#{obj1} it's not a canonical value.")
 end
 
 def mk_value(value)
@@ -38,14 +38,24 @@ compare_id(Float(11.1).to_i, Float(11.1).to_i)
 
 # - FLoat
 puts("\nFloat:")
+f = 11.1
 compare_id(11.1, 11.100000000)
 compare_id(Float(11.1), Float(11.0))
 compare_id('11.1'.to_f, '11.1'.to_f)
 compare_id((11.1 / 1), (11.1 / 1))
 compare_id(mk_value(11.1), mk_value(11.1))
 compare_id(Float(11).to_f, Float(11).to_f)
+compare_id(f, Float(f))
 
 # - String
+puts("\nString:")
+s = 'Ruby'
+compare_id('Ruby', 'Ruby')
+compare_id(String('Ruby'), String('Ruby'))
+compare_id(:Ruby.to_s, :Ruby.to_s)
+compare_id('Ruby'.delete_suffix('y'), 'Ruby'.delete_suffix('y'))
+compare_id(mk_value('Ruby'), mk_value('Ruby'))
+compare_id(s, String(s))
 
 # - Array
 
