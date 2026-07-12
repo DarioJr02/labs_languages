@@ -2,6 +2,9 @@
 
 # The goal of this file is to practice about ->
 # - Ruby design philosophy about objects.
+# - Canonical values.
+
+# 1. Get ID of an object.
 
 def get_object_id(*obj)
   arr = []
@@ -14,19 +17,33 @@ end
 
 # get_object_id(1.to_s, '1', 2.to_s, '2', 3.to_s, '3')
 
-# 1. Check if a value is canonical.
+# 2. Check if a value is canonical.
 
 def compare_id(obj1, obj2)
   puts(obj1.object_id.equal?(obj2.object_id) ? "#{obj1} is a canonical value | Type = #{obj1.class}" : "#{obj1.class} it's not a canonical value.")
 end
 
+def mk_value(value)
+  return value
+end
+
 # - Integer
+puts('Integer:')
 compare_id(10, 10)
 compare_id(Integer(10), Integer(10))
 compare_id('10'.to_i, '10'.to_i)
-compare_id((100.0 / 10.0).to_i, (100 / 10))
+compare_id((100.0 / 10.0).to_i, 100 / 10)
+compare_id(mk_value(10), mk_value('10'.to_i))
+compare_id(Float(11.1).to_i, Float(11.1).to_i)
 
 # - FLoat
+puts("\nFloat:")
+compare_id(11.1, 11.100000000)
+compare_id(Float(11.1), Float(11.0))
+compare_id('11.1'.to_f, '11.1'.to_f)
+compare_id((11.1 / 1), (11.1 / 1))
+compare_id(mk_value(11.1), mk_value(11.1))
+compare_id(Float(11).to_f, Float(11).to_f)
 
 # - String
 
