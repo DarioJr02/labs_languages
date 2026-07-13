@@ -97,5 +97,15 @@ compare_id(!mk_value(true), mk_value(bf))
 compare_id((false && false), !(true && true))
 
 # - nil
+puts("\nnil:")
+nl = nil
+compare_id(nil, nil)
+compare_id(nl, nil)
+compare_id(mk_value(nil), mk_value(nil))
+compare_id(nl.to_i, nl.to_i)
+compare_id(nl.to_f, nil.to_f)
+compare_id(nl.to_s, nl.to_s)
+compare_id(nl.to_a, nl.to_a)
+compare_id(nl.to_s, nil.to_s)
 
 # - Symbol
