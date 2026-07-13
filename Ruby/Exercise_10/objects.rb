@@ -79,6 +79,13 @@ compare_id(mk_value(h1), mk_value({ 'ID' => 0 }))
 compare_id(Hash({ 'ID' => 0 }), Hash({ 'ID' => 0 }))
 
 # - True
+puts("\ntrue:")
+bt = true
+compare_id(true, true)
+compare_id(bt, true)
+compare_id(!false, !false)
+compare_id(!mk_value(false), !mk_value(false))
+compare_id(!(false && false), (true && true))
 
 # - False
 
