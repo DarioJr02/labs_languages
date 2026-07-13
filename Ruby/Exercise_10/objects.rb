@@ -88,6 +88,13 @@ compare_id(!mk_value(false), !mk_value(false))
 compare_id(!(false && false), (true && true))
 
 # - False
+puts("\ntrue:")
+bf = false
+compare_id(false, false)
+compare_id(bf, false)
+compare_id(bf, !true)
+compare_id(!mk_value(true), mk_value(bf))
+compare_id((false && false), !(true && true))
 
 # - nil
 
