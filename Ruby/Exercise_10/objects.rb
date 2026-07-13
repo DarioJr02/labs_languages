@@ -24,7 +24,7 @@ def compare_id(obj1, obj2)
 end
 
 def mk_value(value)
-  return value
+  value
 end
 
 # - Integer
@@ -42,7 +42,7 @@ f = 11.1
 compare_id(11.1, 11.100000000)
 compare_id(Float(11.1), Float(11.0))
 compare_id('11.1'.to_f, '11.1'.to_f)
-compare_id((11.1 / 1), (11.1 / 1))
+compare_id(11.1 / 1, 11.1 / 1)
 compare_id(mk_value(11.1), mk_value(11.1))
 compare_id(Float(11).to_f, Float(11).to_f)
 compare_id(f, Float(f))
@@ -51,8 +51,11 @@ compare_id(f, Float(f))
 puts("\nString:")
 s = 'Ruby'
 compare_id('Ruby', 'Ruby')
+compare_id(11.to_s, Integer(11).to_s)
+compare_id(11.1.to_s, Float(11.1).to_s)
 compare_id(String('Ruby'), String('Ruby'))
 compare_id(:Ruby.to_s, :Ruby.to_s)
+# compare_id('Ruby'.to_s, 'Ruby'.to_s)
 compare_id('Ruby'.delete_suffix('y'), 'Ruby'.delete_suffix('y'))
 compare_id(mk_value('Ruby'), mk_value('Ruby'))
 compare_id(s, String(s))
