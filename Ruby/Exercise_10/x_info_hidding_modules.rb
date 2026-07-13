@@ -12,6 +12,10 @@ module Farm
 
   class Goat
   end
+
+  def self.funct(x)
+    return x.reverse
+  end
 end
 
 # ob = Chicken.new # ==> Error: uninitialized constant Chicken.
@@ -25,3 +29,6 @@ puts(ob, ob2.class)
 
 ob3 = Farm::Goat.new
 puts(ob3, ob3.class)
+
+ob4 = Farm.funct('Kikiriki')
+puts(ob4)
