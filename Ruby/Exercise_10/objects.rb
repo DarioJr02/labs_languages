@@ -61,6 +61,7 @@ compare_id(mk_value('Ruby'), mk_value('Ruby'))
 compare_id(s, String(s))
 
 # - Array
+puts("\nArray:")
 compare_id([1, 2], [1, 2])
 compare_id([], [])
 compare_id((0..2).to_a, (0..2).to_a)
@@ -70,6 +71,12 @@ compare_id(mk_value([1, 2]), mk_value([1, 2]))
 compare_id(([1, 2] << 3), ([1, 2] << 3))
 
 # - Hash
+puts("\nHash:")
+h1 = { 'ID' => 0 }
+compare_id({ 'ID' => 0 }, { 'ID' => 0 })
+compare_id(h1, { 'ID' => 0 })
+compare_id(mk_value(h1), mk_value({ 'ID' => 0 }))
+compare_id(Hash({ 'ID' => 0 }), Hash({ 'ID' => 0 }))
 
 # - True
 
