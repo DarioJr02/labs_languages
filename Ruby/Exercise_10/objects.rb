@@ -55,12 +55,19 @@ compare_id(11.to_s, Integer(11).to_s)
 compare_id(11.1.to_s, Float(11.1).to_s)
 compare_id(String('Ruby'), String('Ruby'))
 compare_id(:Ruby.to_s, :Ruby.to_s)
-# compare_id('Ruby'.to_s, 'Ruby'.to_s)
+compare_id('Ruby'.to_s, 'Ruby'.to_s)
 compare_id('Ruby'.delete_suffix('y'), 'Ruby'.delete_suffix('y'))
 compare_id(mk_value('Ruby'), mk_value('Ruby'))
 compare_id(s, String(s))
 
 # - Array
+compare_id([1, 2], [1, 2])
+compare_id([], [])
+compare_id((0..2).to_a, (0..2).to_a)
+compare_id(Array([1, 2]), Array([1, 2]))
+compare_id('Ruby Language'.split(' '), 'Ruby'.split(' '))
+compare_id(mk_value([1, 2]), mk_value([1, 2]))
+compare_id(([1, 2] << 3), ([1, 2] << 3))
 
 # - Hash
 
