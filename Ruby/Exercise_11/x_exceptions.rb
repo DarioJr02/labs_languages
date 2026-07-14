@@ -14,8 +14,11 @@ def divide(op1, op2)
   end
 end
 
-result = divide(9, 2)
-puts(result)
+def divide2(op1, op2)
+  return (op1 / op2)
+rescue ZeroDivisionError
+  puts('Dividing by 0? Not in my code.')
+end
 
-result2 = divide(9, 0)
-puts(result2)
+puts(divide2(11, 2))
+puts(divide2(2, 0))
