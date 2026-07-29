@@ -41,6 +41,12 @@ Error Ancestors: [#{e.class.ancestors}]")
   ensure
     puts('This line will be executed no matter what.')
   end
+
+  def self.ensure_test1(msg)
+    return msg
+  ensure
+    puts("This expression will be executed no matter what: #{9**2}")
+  end
 end
 
 puts('1. e methods:')
@@ -55,3 +61,5 @@ puts(z)
 
 puts(Exceptions.ancestors_check('a', 'b'))
 puts(Exceptions.ensure_test(9, 0))
+
+puts(Exceptions.ensure_test1('Message'))
