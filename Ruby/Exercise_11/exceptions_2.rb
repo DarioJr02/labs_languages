@@ -47,6 +47,19 @@ Error Ancestors: [#{e.class.ancestors}]")
   ensure
     puts("This expression will be executed no matter what: #{9**2}")
   end
+
+  def self.else_in_exceptions(val1, val2)
+    return (val1 / val2)
+  rescue StandardError => e
+    puts("Error Message: [#{e.message}]
+Error Type: [#{e.class}]
+Error Backtrace: [#{e.backtrace}]
+Error Ancestors: [#{e.class.ancestors}]")
+  else
+    puts('Method executed correctly.')
+  ensure
+    puts('This line will be executed no matter what baby.')
+  end
 end
 
 puts('1. e methods:')
@@ -63,3 +76,4 @@ puts(Exceptions.ancestors_check('a', 'b'))
 puts(Exceptions.ensure_test(9, 0))
 
 puts(Exceptions.ensure_test1('Message'))
+puts(Exceptions.else_in_exceptions(1, 39))
