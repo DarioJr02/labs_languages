@@ -7,9 +7,9 @@
 
 def divide(op1, op2)
   begin
-    return (op1 / op2)
+    return (op1/op2)
   rescue ZeroDivisionError
-    print('División por 0 no posible.')
+    print('Dividing by 0 not allowed.')
     return nil
   end
 end
@@ -17,7 +17,8 @@ end
 def divide2(op1, op2)
   return (op1 / op2)
 rescue ZeroDivisionError
-  puts('Dividing by 0? Not in my code.')
+  print('Dividing by 0? Not in my code.')
+  return nil
 end
 
 puts(divide2(11, 2))
