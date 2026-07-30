@@ -30,6 +30,12 @@ module Exceptions # rubocop:disable Style/Documentation
   def self.unh_exception(val)
     raise
   end
+
+  def self.raise_specifying(val)
+    raise ArgumentError, "val can't be negative" if val.negative?
+
+    return val
+  end
 end
 
 # 1. raise:
@@ -43,4 +49,5 @@ puts(y)
 
 z = Exceptions.ng_num_check(-4)
 
-x1 = Exceptions.unh_exception(3)
+# x1 = Exceptions.unh_exception(3)
+x2 = Exceptions.raise_specifying(-2)
