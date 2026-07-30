@@ -19,6 +19,12 @@ module Exceptions # rubocop:disable Style/Documentation
 
   def self.ng_num_check(num)
     raise 'Number cannot be negative' if num.negative?
+  rescue StandardError => e
+    puts("#{e.message}
+#{e.class}
+#{e.backtrace}")
+  ensure
+    puts('This line must be executed.')
   end
 end
 
