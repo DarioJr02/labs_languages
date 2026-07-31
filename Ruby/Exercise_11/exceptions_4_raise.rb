@@ -34,7 +34,6 @@ module CustomExceptions
     puts("#{e.message}
     #{e.class}
     #{e.backtrace}")
-
   end
 end
 
