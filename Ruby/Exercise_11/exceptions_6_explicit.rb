@@ -36,6 +36,8 @@ while attempts < 3
   begin
     raise CustomExceptions::ConnectionError, 'Connection Failed!' unless db.connect
 
+    # raise CustomExceptions::ConnectionError, 'Connection Failed!' unless db.connect == true
+
     puts('Connection Success!')
     break
     rescue CustomExceptions::ConnectionError => e
