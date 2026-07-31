@@ -20,11 +20,27 @@ class Database
   end
 
   def connect
-    attempts = 0
-    raise CustomExceptions::ConnectionError, 'Connection failed!' if attempts < 3
+    raise CustomExceptions::ConnectionError, 'Connection failed!' if @file_name == 'nosql'
 
     puts('Connection Success!')
   end
 end
 
+# db = Database.new('')
+# db = Database.new('')
 db = Database.new('db')
+
+attempts = 0
+
+while attempts < 3
+  begin
+    db.connect
+    break
+    rescue CustomExceptions::ConnectionError => e
+      puts("#{e.message}
+      #{e.class}
+      #{e.backtrace}")
+
+      raise if attempts >= 3
+  end
+end
