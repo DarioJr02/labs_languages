@@ -15,6 +15,9 @@ class Customer
 
   # 1. Constructor:
   def initialize(user_name, balance)
+    raise InvalidUserName, 'Invalid user name.' if user_name.strip.empty?
+    raise InsufficientBalance, 'Balance cannot be negative.' if balance.negative?
+
     @_user_name = user_name
     @_balance = balance
   end
@@ -35,8 +38,8 @@ module CustomExceptions
   end
 end
 
-c1 = Customer.new('Toño', 459)
+c1 = Customer.new('D', -1)
 puts("Customer's user name: #{c1._user_name} | Balance #{c1._balance}")
 
-CustomExceptions.item_payment(c1)
+# CustomExceptions.item_payment(c1)
 puts(c1._balance)
