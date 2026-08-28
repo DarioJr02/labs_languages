@@ -1,6 +1,6 @@
 # frozen_string_literal:true
 
-# At this file we'll learn about ==> 
+# At this file we'll learn about ==>
 # Precedence
 
 # 1: Precedence
